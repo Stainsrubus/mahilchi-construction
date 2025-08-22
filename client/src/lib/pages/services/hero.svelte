@@ -221,13 +221,15 @@
         bind:this={aboutHeading}
         class="text-4xl text-white md:text-6xl font-bold my-5 leading-tight max-w-6xl mx-auto !font-montserrat animate-element"
       >
-        Where Construction Meets Quality, Commitment, & Innovation
+      Residential Building Construction
+Building Your Dream, Brick by Brick
+
       </h1>
       <p
         bind:this={aboutParagraph}
         class="text-base max-w-lg mx-auto !font-montserrat text-[#88A1B1] animate-element"
       >
-        Our team blends architectural creativity, modern engineering, & project management expertise to build durable
+      We build beautiful, durable homes that blend modern designs with traditional layouts. With quality work, strong structures, and on-time delivery, we create safe and comfortable spaces for your family.
       </p>
     </div>
 

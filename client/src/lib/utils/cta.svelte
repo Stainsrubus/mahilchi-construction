@@ -92,7 +92,7 @@
                   on a quote today
               </h2>
               <p class="text-xl text-gray-300 leading-loose max-w-2xl mx-auto">
-                  Ready to start your construction project? Get in touch with our expert team for a personalized consultation and detailed quote.
+                Looking for a trusted construction partner? We deliver quality work, on time and within budget. Share your project details with us today and let’s bring your vision to life.
               </p>
           </div>
           <div bind:this={buttonElement}>

@@ -6,17 +6,17 @@
     const services = [
       {
         title: "Building Construction",
-        description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua",
+        description: "We handle all types of construction with precision and care, from homes to commercial and industrial projects. With a focus on quality, safety, and timely delivery, we build strong and lasting structures within your budget.",
         icon: "/svg/vector1.svg"
       },
       {
         title: "Exterior Finishing",
-        description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua",
+        description: "We offer expert exterior finishing that protects your building while enhancing its look. From plastering and painting to cladding and designs, we ensure durability with a stylish finish that makes your property stand out.",
         icon: "/svg/vector2.svg"
       },
       {
         title: "Interior Design & Execution",
-        description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua",
+        description: "We design and build interiors tailored to your style. From planning and materials to execution, we create spaces that look great, feel comfortable, and truly fit your lifestyle.",
         icon: "/svg/vector3.svg"
       }
     ];
@@ -123,8 +123,7 @@
     <div class="mx-[5%]">
       <!-- Section Header -->
       <h2 bind:this={headerElement} class="text-3xl font-bold text-gray-800 text-center leading-normal !pb-12">
-        Complete Construction &<br>
-        Design Solutions
+        Laying the Foundation <br /> for Your Success.
       </h2>
   
       <!-- Services Grid Container -->

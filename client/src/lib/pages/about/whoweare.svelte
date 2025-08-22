@@ -93,19 +93,17 @@
             <div bind:this={leftContent} class="w-full lg:w-1/2">
                 <div class="flex gap-2 items-center flex-row mb-5">
                     <div class="bg-yellow-500 w-1 h-4"></div>
-                    <h3 class="text-sm font-semibold text-gray-500">WHO WE ARE</h3>
+                    <h3 class="text-sm font-semibold text-gray-500">For Trust & Partnerships
+                    </h3>
                 </div>
                 <h2 class="text-3xl md:text-4xl font-sans leading-normal font-semibold mb-6 w-[70%] text-primary">
-                    Lorem Ipsum Dummy Content Generator
+                    Committed to Quality & Precision
                 </h2>
                 <div class="text-gray-600 text-lg leading-relaxed mb-8">
                     <p class="mb-4">
-                        Lorem Ipsum Dolor Sit Amet, Consecutive Adipiscing Elit. Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat.
+                        We believe construction is more than structures, it’s about partnerships, reliability, and creating spaces that inspire confidence.
                     </p>
-                    <p class="mb-4">
-                        Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse Cillum Dolore.
-                    </p>
-                    <p class="text-sm text-gray-500 mb-6">Over 20 years of experience</p>
+                    <p class="text-sm text-gray-500 mb-6">Building with Purpose, Leading with Integrity</p>
                 </div>
                 <button class="rounded-full py-[10px] px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base flex items-center gap-2 hover:scale-105 transition-transform duration-200">
                     View Services

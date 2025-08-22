@@ -92,7 +92,7 @@
 			<!-- Left Section -->
 			<div bind:this={leftSection} class="w-full z-20 md:w-1/4 mb-8 md:mb-0">
 				<p class="text-gray-600 mb-6">
-					Lorem ipsum dolor sit amet consectetur. Mi nibh venenatis in suscipit turpis enim cursus vulputate amet. Lobortis mi platea aliquam senectus tempus mauris neque.
+					We are a trusted construction company, delivering quality residential, commercial, and industrial projects. Our focus is on strong design, timely completion, and lasting customer satisfaction. Connect with us to build your future.
 				</p>
 				<div class="flex space-x-4">
 					<a href="#"><Icon icon="ic:outline-facebook" width="24" height="24" /></a>
@@ -150,7 +150,8 @@
 
 		<!-- Footer Bottom -->
 		<div class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-			<p>Non Copyrighted © 2022 Design and upload by rich technologies</p>
+			<p>©2025 Wenoxo Technologies. All rights reserved
+			</p>
 		</div>
 	</div>
 </footer>

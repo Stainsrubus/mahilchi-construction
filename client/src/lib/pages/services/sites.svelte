@@ -2,23 +2,23 @@
     // Service data as JSON
     const services = [
       {
-        tag: "HOMES BUILT TO LAST",
-        title: "Residential Building Construction",
-        description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse",
+        tag: "Residential Building Construction",
+        title: "Building Your Dream, Brick by Brick",
+        description: "We build beautiful, durable homes that blend modern designs with traditional layouts. With quality work, strong structures, and on-time delivery, we create safe and comfortable spaces for your family.",
         image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         alt: "Modern residential house"
       },
       {
-        tag: "SPACES THAT EMPOWER BUSINESS",
-        title: "Commercial Building Construction",
-        description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse",
+        tag: "Commercial Building Construction",
+        title: "Spaces That Empower Business",
+        description: "We design and build professional spaces that support business growth from offices and shops to large complexes. With smart design, reliable construction, and on-time delivery, we create safe, lasting spaces for your success.",
         image: "https://images.unsplash.com/photo-1565008447742-97f6f38c985c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
         alt: "Modern commercial building"
       },
       {
-        tag: "ENGINEERING FOR PRODUCTIVITY",
-        title: "Industrial Building Construction",
-        description: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Velit Esse",
+        tag: "Industrial Building Construction",
+        title: "Constructing the Future of Industry",
+        description: "We specialize in building strong and efficient industrial facilities like warehouses, factories, and plants. With a focus on safety, productivity, and durability, we deliver solutions that support your business growth for years to come.",
         image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80",
         alt: "Modern industrial building"
       }

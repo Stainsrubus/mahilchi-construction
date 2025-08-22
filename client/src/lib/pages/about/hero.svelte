@@ -4,9 +4,9 @@
   
     // Stats data
     const stats = [
-      { value: 25, label: 'Years Experience' },
-      { value: 90, label: 'Success Rate' },
-      { value: 25, label: 'Team Members' },
+      { value: 12, label: 'Years Experience' },
+      { value: 100, label: 'Success Rate' },
+      { value: 50, label: 'Team Members' },
       { value: 25, label: 'Awards Won' }
     ];
   
@@ -221,13 +221,14 @@
           bind:this={aboutHeading}
           class="text-4xl text-white md:text-6xl font-bold my-5 leading-tight max-w-6xl mx-auto !font-montserrat animate-element"
         >
-          Where Construction Meets Quality, Commitment, & Innovation
+        Building with Vision, Delivering with Trust
         </h1>
         <p
           bind:this={aboutParagraph}
           class="text-base max-w-lg mx-auto !font-montserrat text-[#88A1B1] animate-element"
         >
-          Our team blends architectural creativity, modern engineering, & project management expertise to build durable
+        We specialize in creating durable, modern, and sustainable construction solutions with a strong focus on design excellence and project management expertise.
+
         </p>
       </div>
   

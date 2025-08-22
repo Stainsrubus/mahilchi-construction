@@ -124,7 +124,7 @@
                                 value="expertise"
                                 class="px-3 py-4 text-lg font-medium !shadow-none !rounded-none !bg-transparent text-gray-500 hover:text-gray-700 data-[state=active]:border-b-2 data-[state=active]:border-b-[#F9B125] data-[state=active]:text-[#F9B125] transition-colors duration-200"
                             >
-                                Our Expertise
+                                Our Vision
                             </Tabs.Trigger>
                             <Tabs.Trigger
                                 value="values"
@@ -139,7 +139,7 @@
                     <div bind:this={tabsContent}>
                         <Tabs.Content value="mission" class="mt-6 text-gray-600">
                             <p class="leading-loose">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                We strive to transform every client’s vision into reality through innovative design and efficient project management. With a focus on Design & PMC and Tanki (Total Contract) Projects, we deliver reliable, end-to-end solutions. Our commitment is to ensure quality, timeliness, and lasting relationships built on trust and transparency.
                             </p>
                             <div class="grid grid-cols-2 gap-5 mt-6">
                                 <div class="flex items-center">
@@ -163,7 +163,7 @@
 
                         <Tabs.Content value="expertise" class="mt-6 text-gray-600">
                             <p class="leading-loose">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                To be the most trusted and innovative partner in the construction industry, delivering projects that stand as benchmarks of quality, sustainability, and excellence — across residential, commercial, and industrial sectors.
                             </p>
                             <div class="grid grid-cols-2 gap-5 mt-6">
                                 <div class="flex items-center">
@@ -187,7 +187,12 @@
 
                         <Tabs.Content value="values" class="mt-6">
                             <p class="leading-loose">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+                                Trust – We honor our commitments and build confidence through transparency.<br />
+                                Innovation – Embracing modern methods and creative solutions in construction.<br />
+                                Quality – Delivering durable, sustainable, and high-standard outcomes.<br />
+                                Responsibility – Upholding safety, ethics, and environmental care in every project.<br />
+                                Partnership – Growing together with clients, employees, and communities.<br />
+                                
                             </p>
                             <div class="grid grid-cols-2 gap-5 mt-6">
                                 <div class="flex items-center">

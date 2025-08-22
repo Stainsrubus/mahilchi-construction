@@ -121,7 +121,7 @@
                     <h2 class="text-sm font-semibold text-gray-500">OUR PROJECTS</h2>
                 </div>
                 <h1 class="text-2xl font-semibold leading-normal text-gray-800 mb-10">
-                    Lorem Ipsum Dummy <br /> Content Generator
+                    Making Lasting  <br />First Impressions
                 </h1>
             </div>
         </div>
