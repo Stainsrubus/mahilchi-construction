@@ -1,0 +1,121 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "title": "Industrial Building Construction",
+        "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Vellt Esse Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Vellt Esse",
+        "images": [
+          {
+            "id": 1,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 2,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 3,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 4,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          }
+        ],
+        "mainImage": "/images/home.png"
+      },
+      {
+        "id": 2,
+        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "title": "Commercial Construction",
+        "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Vellt Esse",
+        "images": [
+          {
+            "id": 1,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 2,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 3,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 4,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          }
+        ],
+        "mainImage": "/images/home2.png"
+      },
+      {
+        "id": 3,
+        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "title": "Infrastructure Development",
+        "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Vellt Esse Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Vellt Esse",
+        "images": [
+          {
+            "id": 1,
+            "thumbnail": "/images/infrastructure-thumb1.jpg",
+            "full": "/images/infrastructure-full1.jpg"
+          },
+          {
+            "id": 2,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 3,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          },
+          {
+            "id": 4,
+            "thumbnail": "/images/home.png",
+            "full": "/images/home.png"
+          }
+        ],
+        "mainImage": "/images/home1.png"
+      },
+      {
+        "id": 4,
+        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "title": "Residential Complexes",
+        "description": "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Ut Enim Ad Minim Veniam, Quis Nostrud Exercitation Ullamco Laboris Nisi Ut Aliquip Ex Ea Commodo Consequat. Duis Aute Irure Dolor In Reprehenderit In Voluptate Vellt Esse",
+        "images": [
+          {
+            "id": 1,
+            "thumbnail": "/images/home1.png",
+            "full": "/images/home1.png"
+          },
+          {
+            "id": 2,
+            "thumbnail": "/images/home2.png",
+            "full": "/images/home2.png"
+          },
+          {
+            "id": 3,
+            "thumbnail": "/images/home2.png",
+            "full": "/images/home2.png"
+          },
+          {
+            "id": 4,
+            "thumbnail": "/images/home1.png",
+            "full": "/images/home1.png"
+          }
+        ],
+        "mainImage": "/images/home.png"
+      }
+    ]
+  }
+  
