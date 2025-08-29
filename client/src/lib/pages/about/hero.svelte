@@ -248,7 +248,7 @@
   </section>
   
   <!-- Video Section -->
-  <section  class="relative lg:-mt-40 md:-mt-44 -mt-36 mx-[5%] ">
+  <section  class="relative container md:mx-auto lg:-mt-40 md:-mt-44 -mt-36 px-[5%] ">
     <div class="relative w-full h-fit">
       <video
         class="w-full md:h-[500px] h-[300px] object-cover md:rounded-4xl rounded-2xl"
@@ -256,7 +256,7 @@
         autoplay
         loop
         playsinline
-        src="/video/construction.webm"
+        src="/video/construction2.webm"
         type="video/*"
         preload="auto"
       ></video>
