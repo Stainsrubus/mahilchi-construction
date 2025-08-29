@@ -103,13 +103,12 @@
                     <p class="mb-4">
                         Construction is not merely about raising structures — it is about shaping communities, enriching lifestyles, and creating spaces that inspire. At Mahilchi, we go beyond bricks and concrete to deliver projects that embody vision and value. With a strong foundation of innovation, expertise, and dedication, we ensure every project is executed with precision and care.
                     </p>
-                    <p class="text-sm text-gray-500 mb-6">Building with Purpose, Leading with Integrity</p>
-                </div>
-                <div class="mb-4">
                     <p class="bg-[#F1F2FA] text-primary w-fit rounded-lg p-2">
                         Over 20 years of experience
                     </p>
+                    <!-- <p class="text-sm text-gray-500 mb-6">Building with Purpose, Leading with Integrity</p> -->
                 </div>
+               
                 <button class="rounded-full py-[10px] px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base flex items-center gap-2 hover:scale-105 transition-transform duration-200">
                     View Services
                     <Icon icon="solar:arrow-right-linear" width="24" height="24" />

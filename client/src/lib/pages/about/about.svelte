@@ -85,7 +85,7 @@
     }
 </script>
 
-<section bind:this={sectionElement} class="md:py-16 py-10">
+<section bind:this={sectionElement} class="md:py-16 py-24">
     <div class="container mx-auto lg:px-16">
         <div class="flex flex-col md:flex-row w-full md:gap-10 overflow-hidden">
             <!-- House Image Section -->
@@ -98,7 +98,7 @@
             </div>
 
             <!-- Content Section -->
-            <div class="w-full md:w-1/2 py-6 md:py-8 pl-8">
+            <div class="w-full md:w-1/2 py-6 md:py-8 px-5 md:px-auto">
                 <!-- Header Content -->
                 <div bind:this={headerContent}>
                     <div class="flex gap-2 items-center flex-row mb-5">
@@ -110,10 +110,10 @@
                     </h1>
                 </div>
 
-                <Tabs.Root value="mission" class="w-full">
+                <Tabs.Root value="mission" class="w-full ">
                     <!-- Tabs List -->
-                    <div bind:this={tabsList}>
-                        <Tabs.List class="flex space-x-4 !bg-transparent">
+                    <div bind:this={tabsList} class="overflow-x-auto">
+                        <Tabs.List class="flex md:space-x-4 spaxe-x-1 !bg-transparent overflow-x-scroll no-scrollbar">
                             <Tabs.Trigger
                                 value="mission"
                                 class="px-3 py-4 text-lg font-medium !shadow-none !rounded-none !bg-transparent text-gray-500 hover:text-gray-700 data-[state=active]:border-b-2 data-[state=active]:border-b-[#F9B125] data-[state=active]:text-[#F9B125] transition-colors duration-200"

@@ -151,7 +151,7 @@
       </div>
       
       <!-- Scrolling Container -->
-      <div bind:this={scrollingContainer} class="relative overflow-hidden">
+      <div class="relative overflow-hidden">
           <div
               bind:this={scrollContainer}
               class="flex !flex-row gap-8"
