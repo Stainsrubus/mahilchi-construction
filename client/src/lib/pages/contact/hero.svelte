@@ -235,13 +235,13 @@
       bind:this={aboutImages[0]}
       src="/svg/build1.svg"
       alt="Modern luxury home at sunset"
-      class="absolute h-3/4 left-0 bottom-0 object-contain animate-element"
+      class="absolute h-3/4  md:block hidden left-0 bottom-0 object-contain animate-element"
     />
     <img
       bind:this={aboutImages[1]}
       src="/svg/build2.svg"
       alt="Modern luxury home at sunset"
-      class="absolute h-3/4 right-0 bottom-0 object-contain animate-element"
+      class="absolute h-3/4 md:block hidden right-0 bottom-0 object-contain animate-element"
     />
   </div>
 </section>

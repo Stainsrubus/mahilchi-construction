@@ -138,7 +138,7 @@
                     </div>
                     
                     <!-- Info Card -->
-                    <div bind:this={infoCard} class="absolute flex gap-5 md:bottom-4 bottom-2 items-center left-20 bg-gray-800 text-white p-4 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                    <div bind:this={infoCard} class="absolute  hidden md:flex gap-5 md:bottom-4 bottom-2 items-center left-20 bg-gray-800 text-white p-4 rounded-lg hover:bg-gray-700 transition-colors duration-200">
                         <img class="md:w-16 w-10" src="/images/iso.png" alt="">
                         <div class="flex flex-col justify-start gap-1 mb-1">
                             <h4 class="md:text-lg  text-base font-semibold">For Trust & Partnerships</h4>
@@ -146,6 +146,18 @@
                                 Committed to <br/> Quality & Precision
                             </p>
                         </div>
+                        
+                    </div>
+
+                    <div bind:this={infoCard} class="absolute w-full  md:hidden flex gap-5 -bottom-32 items-center bg-gray-800 text-white p-4 rounded-lg hover:bg-gray-700 transition-colors duration-200">
+                        <img class="md:w-16 w-10" src="/images/iso.png" alt="">
+                        <div class="flex flex-col justify-start gap-1 mb-1">
+                            <h4 class="md:text-lg  text-base font-semibold">For Trust & Partnerships</h4>
+                            <p class="md:text-sm text-xs w-[90%]">
+                                Committed to <br/> Quality & Precision
+                            </p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>

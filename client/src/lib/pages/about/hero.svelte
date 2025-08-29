@@ -236,22 +236,22 @@
         bind:this={aboutImages[0]}
         src="/svg/build1.svg"
         alt="Modern luxury home at sunset"
-        class="absolute h-3/4 left-0 bottom-0 object-contain animate-element"
+        class="absolute h-3/4 md:block hidden left-0 bottom-0 object-contain animate-element"
       />
       <img
         bind:this={aboutImages[1]}
         src="/svg/build2.svg"
         alt="Modern luxury home at sunset"
-        class="absolute h-3/4 right-0 bottom-0 object-contain animate-element"
+        class="absolute h-3/4 md:block hidden right-0 bottom-0 object-contain animate-element"
       />
     </div>
   </section>
   
   <!-- Video Section -->
-  <section  class="relative lg:-mt-40 md:-mt-44 -mt-44 mx-[5%] ">
+  <section  class="relative lg:-mt-40 md:-mt-44 -mt-36 mx-[5%] ">
     <div class="relative w-full h-fit">
       <video
-        class="w-full md:h-[500px] h-[300px] object-cover rounded-4xl"
+        class="w-full md:h-[500px] h-[300px] object-cover md:rounded-4xl rounded-2xl"
         muted
         autoplay
         loop
@@ -266,14 +266,14 @@
   <!-- Stats Section -->
   <section class="lg:py-20  py-10 flex items-center justify-center">
     <!-- Stats Section -->
-    <div class="flex lg:w-[70%] justify-between items-center gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20"
+    <div class="md:flex w-full lg:w-[70%] grid grid-cols-2 md:justify-between md:items-center gap-x-2 gap-y-10 md:gap-x-10 md:gap-y-20"
          in:fly={{ y: 30, duration: 800, delay: 400 }}>
       {#each stats as stat, index}
         <div class="text-center" bind:this={sections[index]}>
-          <div class="text-3xl md:text-5xl font-bold text-primary mb-2">
+          <div class="text-5xl font-bold text-primary mb-2">
             {displayValues[index]}{stat.label.includes('Success Rate') ? '%' : '+'}
           </div>
-          <div class="text-sm md:text-base text-primary">
+          <div class="text-base text-primary">
             {stat.label}
           </div>
         </div>

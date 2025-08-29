@@ -236,22 +236,22 @@
       bind:this={aboutImages[0]}
       src="/svg/build1.svg"
       alt="Modern luxury home at sunset"
-      class="absolute h-3/4 left-0 bottom-0 object-contain animate-element"
+      class="absolute h-3/4 left-0 md:block hidden bottom-0 object-contain animate-element"
     />
     <img
       bind:this={aboutImages[1]}
       src="/svg/build2.svg"
       alt="Modern luxury home at sunset"
-      class="absolute h-3/4 right-0 bottom-0 object-contain animate-element"
+      class="absolute h-3/4 right-0 md:block hidden bottom-0 object-contain animate-element"
     />
   </div>
 </section>
 
 <!-- Video Section -->
-<section  class="relative lg:-mt-40  -mt-32 mx-[5%] ">
+<section  class="relative lg:-mt-40  -mt-20 mx-[5%] ">
   <div class="relative w-full h-fit">
     <video
-      class="w-full md:h-[500px] h-[300px] object-cover rounded-4xl"
+      class="w-full md:h-[500px] h-[300px] object-cover md:rounded-4xl rounded-2xl"
       muted
       autoplay
       loop

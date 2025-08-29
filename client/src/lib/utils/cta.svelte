@@ -85,7 +85,7 @@
   <div class="md:py-20 py-10 container mx-auto lg:px-16">
       <div class="absolute inset-0 bg-black/80"></div>
       
-      <div class="relative z-10 container mx-auto px-4 text-center flex flex-col md:flex-row justify-between md:items-center items-start">
+      <div class="relative container mx-auto px-4 text-center flex flex-col md:flex-row justify-between md:items-center items-start">
           <div bind:this={textContent} class="text-left flex flex-col gap-5">
               <h2 class="text-3xl md:text-4xl font-semibold leading-normal">
                   Let's work together<br>
