@@ -116,7 +116,7 @@
       </div>
   
       <!-- Project Description -->
-      <div class="mb-12">
+      <div class="md:mb-12 ">
         <h2 class="text-xl font-semibold text-gray-800 mb-4">Project Details</h2>
         <p class="text-gray-600 leading-relaxed whitespace-pre-line">
           {product.description}
@@ -125,7 +125,7 @@
 
     </div>
   {/if}
-  <section class="container mx-auto mb-20">
+  <section class="container mx-auto md:mb-20 mb-10 px-5 md:px-auto">
     <div class="bg-white rounded-lg shadow-lg overflow-hidden h-96 transition-all duration-300 hover:shadow-xl">
         <iframe
           src={mapUrl}

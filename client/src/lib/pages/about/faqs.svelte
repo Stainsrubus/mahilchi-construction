@@ -4,7 +4,6 @@
     import { Button } from "$lib/components/ui/button";
     import { onMount } from 'svelte';
 
-    // Updated FAQ data structure
     const faqData = {
       'Services We Provide': [
         {
@@ -63,28 +62,22 @@
     };
 
     let activeTab = 'Services We Provide';
-
-    // Animation elements
     let sectionElement: HTMLElement;
     let headerContent: HTMLElement;
     let tabButtons: HTMLElement;
     let tabContent: HTMLElement;
 
     onMount(() => {
-        // Set initial state immediately
         setInitialState();
-
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        // First reset to initial state, then animate in
                         animateOut();
                         setTimeout(() => {
                             animateIn();
                         }, 50);
                     } else {
-                        // Reset elements when leaving view
                         animateOut();
                     }
                 });
@@ -94,11 +87,9 @@
                 rootMargin: '0px 0px -100px 0px'
             }
         );
-
         if (sectionElement) {
             observer.observe(sectionElement);
         }
-
         return () => {
             if (sectionElement) {
                 observer.unobserve(sectionElement);
@@ -118,21 +109,18 @@
     }
 
     function animateIn() {
-        // Animate elements with staggered delays
         setTimeout(() => {
             if (headerContent) {
                 headerContent.style.opacity = '1';
                 headerContent.style.transform = 'translateY(0)';
             }
         }, 100);
-
         setTimeout(() => {
             if (tabButtons) {
                 tabButtons.style.opacity = '1';
                 tabButtons.style.transform = 'translateY(0)';
             }
         }, 300);
-
         setTimeout(() => {
             if (tabContent) {
                 tabContent.style.opacity = '1';
@@ -150,49 +138,49 @@
             }
         });
     }
-  </script>
+</script>
 
-  <section bind:this={sectionElement} class="py-20 bg-[#F5F6F8] text-gray-800">
-    <div class="container mx-auto max-w-4xl flex flex-col items-center justify-center lg:px-16">
+<section bind:this={sectionElement} class="py-12 md:py-20 bg-[#F5F6F8] text-gray-800">
+    <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-16">
         <!-- Header Content -->
-        <div bind:this={headerContent} class="text-center mb-8">
-            <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Any Questions? Look Here.</h2>
-            <p class="text-[#152F45E5] mb-6">Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing</p>
+        <div bind:this={headerContent} class="text-center mb-6 md:mb-8">
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4">Any Questions? Look Here.</h2>
+            <p class="text-[#152F45E5] text-sm sm:text-base mb-4 md:mb-6">Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing</p>
         </div>
 
         <!-- Custom Button Tabs -->
-        <div bind:this={tabButtons} class="flex justify-start items-center mb-8 border border-[#EBEEF8] rounded-md p-1 gap-2 overflow-x-auto">
-            {#each Object.keys(faqData) as tab, index}
-                <Button
-                    variant={activeTab === tab ? 'default' : 'ghost'}
-                    class={activeTab === tab ? 'bg-[#F9BF30] text-black rounded-md hover:bg-[#F9BF30] duration-300 transition-all' : 'text-[#ACB6BE]'}
-                    onclick={() => (activeTab = tab)}
-                >
-                    {tab}
-                </Button>
-            {/each}
+        <div bind:this={tabButtons} class="mx-auto max-w-full overflow-x-auto scrollbar-hide">
+            <div class="flex justify-start gap-2 p-1 border border-[#EBEEF8] rounded-md min-w-max">
+                {#each Object.keys(faqData) as tab}
+                    <Button
+                        variant={activeTab === tab ? 'default' : 'ghost'}
+                        class="flex-shrink-0 px-3 py-1.5 text-sm sm:text-base rounded-md {activeTab === tab ? 'bg-[#F9BF30] text-black hover:bg-[#F9BF30]' : 'text-[#ACB6BE] hover:bg-gray-100'} transition-all duration-300"
+                        onclick={() => (activeTab = tab)}
+                    >
+                        {tab}
+                    </Button>
+                {/each}
+            </div>
         </div>
 
         <!-- Tabs Content -->
-        <div bind:this={tabContent}>
-            <Tabs value={activeTab} on:valueChange={(e) => (activeTab = e.detail.value)} class="space-y-4 max-w-4xl">
-                <!-- Hidden TabsList (since we're using custom buttons) -->
+        <div bind:this={tabContent} class="mt-6 md:mt-8">
+            <Tabs value={activeTab} on:valueChange={(e) => (activeTab = e.detail.value)} class="space-y-4 w-full">
                 <TabsList class="hidden">
                     {#each Object.keys(faqData) as tab}
                         <TabsTrigger value={tab}>{tab}</TabsTrigger>
                     {/each}
                 </TabsList>
 
-                <!-- TabsContent for each tab -->
                 {#each Object.keys(faqData) as tab}
-                    <TabsContent value={tab} class="min-w-4xl px-4 pt-7">
-                        <Accordion type="single" collapsible class="space-y-4">
+                    <TabsContent value={tab} class="w-full px-0 sm:px-4 pt-5 md:pt-7">
+                        <Accordion type="single" collapsible class="space-y-3 w-full">
                             {#each faqData[tab] as faq, index}
-                                <AccordionItem value={`item-${tab}-${index}`} class="bg-white rounded-md">
-                                    <AccordionTrigger class="px-4 py-3 hover:no-underline text-left font-medium text-gray-800 hover:bg-gray-50">
+                                <AccordionItem value={`item-${tab}-${index}`} class="bg-white rounded-md w-full">
+                                    <AccordionTrigger class="px-4 py-2.5 hover:no-underline text-left font-medium text-gray-800 hover:bg-gray-50 text-sm sm:text-base">
                                         {index + 1}. {faq.question}
                                     </AccordionTrigger>
-                                    <AccordionContent class="px-4 py-3 text-gray-600">
+                                    <AccordionContent class="px-4 py-2.5 text-gray-600 text-sm sm:text-base">
                                         {faq.answer}
                                     </AccordionContent>
                                 </AccordionItem>
@@ -203,15 +191,34 @@
             </Tabs>
         </div>
     </div>
-  </section>
+</section>
 
-  <style>
-    @media (max-width: 768px) {
-        h2, p {
-            text-align: center;
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    @media (max-width: 640px) {
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
-        .flex {
-            justify-content: center;
+        .min-w-max {
+            min-width: fit-content;
+        }
+        .text-sm {
+            font-size: 0.875rem;
+        }
+        .px-3 {
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+        }
+        .py-1\.5 {
+            padding-top: 0.375rem;
+            padding-bottom: 0.375rem;
         }
     }
-  </style>
+</style>

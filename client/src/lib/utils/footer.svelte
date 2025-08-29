@@ -137,13 +137,16 @@
 			<!-- Top Projects -->
 			<div bind:this={projects} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Top Projects</h3>
-				<div class="grid grid-cols-3 gap-2">
-					<img src="/images/engineer.png" alt="Project 1" class="w-full h-16 object-cover rounded" />
-					<img src="/images/engineer.png" alt="Project 2" class="w-full h-16 object-cover rounded" />
-					<img src="/images/engineer.png" alt="Project 3" class="w-full h-16 object-cover rounded" />
-					<img src="/images/engineer.png" alt="Project 4" class="w-full h-16 object-cover rounded" />
-					<img src="/images/engineer.png" alt="Project 5" class="w-full h-16 object-cover rounded" />
-					<img src="/images/engineer.png" alt="Project 6" class="w-full h-16 object-cover rounded" />
+				<div class="grid grid-cols-3 md:gap-2 gap-3">
+					<img src="/images/Rectangle 3.png" alt="Project 1" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 4.png" alt="Project 2" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 5.png" alt="Project 3" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 6.png" alt="Project 4" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 7.png" alt="Project 5" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 8.png" alt="Project 6" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 9.png" alt="Project 4" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 10.png" alt="Project 5" class="w-full h-16 object-cover rounded" />
+					<img src="/images/Rectangle 11.png" alt="Project 6" class="w-full h-16 object-cover rounded" />
 				</div>
 			</div>
 		</div>

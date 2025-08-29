@@ -82,10 +82,10 @@
 </script>
 
 <section bind:this={sectionElement} class="relative z-20 text-white bg-[url('/images/cta.png')] bg-no-repeat bg-cover bg-center">
-  <div class="py-20 container mx-auto lg:px-16">
+  <div class="md:py-20 py-10 container mx-auto lg:px-16">
       <div class="absolute inset-0 bg-black/80"></div>
       
-      <div class="relative z-10 container mx-auto px-4 text-center flex justify-between items-center">
+      <div class="relative z-10 container mx-auto px-4 text-center flex flex-col md:flex-row justify-between md:items-center items-start">
           <div bind:this={textContent} class="text-left flex flex-col gap-5">
               <h2 class="text-3xl md:text-4xl font-semibold leading-normal">
                   Let's work together<br>
@@ -95,7 +95,7 @@
                 Looking for a trusted construction partner? We deliver quality work, on time and within budget. Share your project details with us today and let’s bring your vision to life.
               </p>
           </div>
-          <div bind:this={buttonElement}>
+          <div class="mt-8 md:mt-0" bind:this={buttonElement}>
               <button
                   class="rounded-full py-[10px] px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base flex items-center gap-2 hover:scale-105 transition-transform duration-200"
               >

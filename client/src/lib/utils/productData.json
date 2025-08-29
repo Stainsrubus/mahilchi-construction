@@ -8,26 +8,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home1.png",
+            "full": "/images/home1.png"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home2.png",
+            "full": "/images/home2.png"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home3.png",
+            "full": "/images/home3.png"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home.png",
+            "thumbnail": "/images/home2.png",
             "full": "/images/home.png"
           }
         ],
-        "mainImage": "/images/home.png"
+        "mainImage": "/images/interior3.png"
       },
       {
         "id": 2,
@@ -37,26 +37,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home1.png",
+            "full": "/images/home1.png"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home2.png",
+            "full": "/images/home2.png"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home3.png",
+            "full": "/images/home3.png"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home.png",
+            "thumbnail": "/images/home2.png",
             "full": "/images/home.png"
           }
         ],
-        "mainImage": "/images/home2.png"
+        "mainImage": "/images/interior2.png"
       },
       {
         "id": 3,
@@ -66,26 +66,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/infrastructure-thumb1.jpg",
-            "full": "/images/infrastructure-full1.jpg"
+            "thumbnail": "/images/home1.png",
+            "full": "/images/home1.png"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home2.png",
+            "full": "/images/home2.png"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home.png",
-            "full": "/images/home.png"
+            "thumbnail": "/images/home3.png",
+            "full": "/images/home3.png"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home.png",
+            "thumbnail": "/images/home2.png",
             "full": "/images/home.png"
           }
         ],
-        "mainImage": "/images/home1.png"
+        "mainImage": "/images/interior1.png"
       },
       {
         "id": 4,
@@ -105,16 +105,16 @@
           },
           {
             "id": 3,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home2.png"
+            "thumbnail": "/images/home3.png",
+            "full": "/images/home3.png"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home1.png",
-            "full": "/images/home1.png"
+            "thumbnail": "/images/home2.png",
+            "full": "/images/home.png"
           }
         ],
-        "mainImage": "/images/home.png"
+        "mainImage": "/images/home3.png"
       }
     ]
   }

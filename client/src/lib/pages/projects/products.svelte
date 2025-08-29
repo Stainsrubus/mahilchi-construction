@@ -69,7 +69,7 @@
     }
 </script>
 
-<div class="bg-white py-20 px-4 sm:px-6 lg:px-8">
+<div class="bg-white md:py-20 py-10 px-4 sm:px-6 lg:px-8">
     <div class="container mx-auto">
         <!-- Product Cards Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-12">
@@ -82,7 +82,7 @@
                     class="bg-white rounded-lg overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl group"
                 >
                     <!-- Product Image -->
-                    <div class="h-96 overflow-hidden">
+                    <div class="md:h-96 h-72 overflow-hidden">
                         <img
                             src={product.mainImage}
                             alt={product.title}
@@ -103,7 +103,10 @@
                         </h3>
                         
                         <!-- Description -->
-                        <p class="text-gray-600 leading-relaxed mb-6">
+                        <p class="text-gray-600  leading-relaxed mb-6 md:hidden">
+                            {product?.description.length > 200 ? `${product?.description.slice(0, 200)}..` : product?.description}
+                        </p>
+                        <p class="hidden md:block">
                             {product?.description}
                         </p>
                         

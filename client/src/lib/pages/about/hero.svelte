@@ -204,7 +204,7 @@
   
   <!-- About Us Section -->
   <section bind:this={aboutSection} class="relative flex items-center">
-    <div class="relative bg-primary h-[563px] p-0 w-screen">
+    <div class="relative bg-primary md:h-[563px] h-[500px] p-0 w-screen">
       <div class="my-10 flex flex-col items-center justify-center text-center">
 
 
@@ -219,7 +219,7 @@
      
         <h1
           bind:this={aboutHeading}
-          class="text-4xl text-white md:text-6xl font-bold my-5 leading-tight max-w-6xl mx-auto !font-montserrat animate-element"
+          class="text-4xl mx-auto  text-white md:text-6xl font-bold my-5 leading-tight lg:max-w-6xl  max-w-[95%] !font-montserrat animate-element"
         >
         Building with Vision, Delivering with Trust
         </h1>
@@ -248,10 +248,10 @@
   </section>
   
   <!-- Video Section -->
-  <section bind:this={videoSection} class="relative -mt-40 mx-[5%] ">
+  <section  class="relative lg:-mt-40 md:-mt-44 -mt-44 mx-[5%] ">
     <div class="relative w-full h-fit">
       <video
-        class="w-full h-[500px] object-cover rounded-4xl"
+        class="w-full md:h-[500px] h-[300px] object-cover rounded-4xl"
         muted
         autoplay
         loop
@@ -264,9 +264,9 @@
   </section>
   
   <!-- Stats Section -->
-  <section class="py-20 flex items-center justify-center">
+  <section class="lg:py-20  py-10 flex items-center justify-center">
     <!-- Stats Section -->
-    <div class="flex w-[70%] justify-between items-center gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20"
+    <div class="flex lg:w-[70%] justify-between items-center gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20"
          in:fly={{ y: 30, duration: 800, delay: 400 }}>
       {#each stats as stat, index}
         <div class="text-center" bind:this={sections[index]}>

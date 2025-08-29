@@ -140,10 +140,10 @@
   });
 </script>
 
-<section bind:this={sectionElement} class="py-20 bg-[#152F45] text-white">
+<section bind:this={sectionElement} class="md:py-20 py-10 bg-[#152F45] text-white">
   <div class="container mx-auto lg:px-16">
       <!-- Header Content -->
-      <div bind:this={headerContent} class="flex justify-between items-start mb-12">
+      <div bind:this={headerContent} class="flex !flex-row px-5 md:px-auto justify-between items-start mb-12">
           <h2 class="text-3xl md:text-4xl font-semibold">Key Milestones</h2>
           <div class="text-right">
               <div class="text-3xl md:text-4xl font-bold text-white opacity-80">2025</div>
@@ -154,7 +154,7 @@
       <div bind:this={scrollingContainer} class="relative overflow-hidden">
           <div
               bind:this={scrollContainer}
-              class="flex gap-8"
+              class="flex !flex-row gap-8"
               style="transition: transform 0.1s linear;"
           >
               {#each milestones as milestone}

@@ -85,15 +85,15 @@
     }
 </script>
 
-<section bind:this={sectionElement} class="py-16">
+<section bind:this={sectionElement} class="md:py-16 py-10">
     <div class="container mx-auto lg:px-16">
-        <div class="flex flex-col md:flex-row w-full gap-10 overflow-hidden">
+        <div class="flex flex-col md:flex-row w-full md:gap-10 overflow-hidden">
             <!-- House Image Section -->
-            <div bind:this={imageSection} class="w-full md:w-[45%] py-6 md:py-8">
+            <div bind:this={imageSection} class=" flex items-center justify-center md:w-[45%]  py-6 md:py-8">
                 <img
-                    src="/images/home.png"
+                    src="/images/home3.png"
                     alt="House"
-                    class="w-full !h-full rounded-lg object-cover hover:scale-105 transition-transform duration-300"
+                    class="md:w-full w-[90%] !h-full rounded-lg object-cover hover:scale-105 transition-transform duration-300"
                 />
             </div>
 

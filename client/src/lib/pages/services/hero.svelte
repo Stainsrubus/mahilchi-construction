@@ -4,9 +4,9 @@
 
   // Stats data
   const stats = [
-    { value: 25, label: 'Years Experience' },
-    { value: 90, label: 'Success Rate' },
-    { value: 25, label: 'Team Members' },
+    { value: 12, label: 'Years Experience' },
+    { value: 100, label: 'Success Rate' },
+    { value: 50, label: 'Team Members' },
     { value: 25, label: 'Awards Won' }
   ];
 
@@ -204,7 +204,7 @@
 
 <!-- About Us Section -->
 <section bind:this={aboutSection} class="relative flex items-center">
-  <div class="relative bg-primary h-[563px] p-0 w-screen">
+  <div class="relative bg-primary md:h-[563px] h-[500px] p-0 w-screen">
     <div class="my-10 flex flex-col items-center justify-center text-center">
 
 
@@ -213,17 +213,16 @@
       <h1  
 
       class="bg-[#163A59] text-[#88A1B1]  border-[#88A1B1] w-fit border px-4 py-2 rounded-full  ">
-       Services
+        Services
       </h1>
     </div>
    
       <h1
         bind:this={aboutHeading}
-        class="text-4xl text-white md:text-6xl font-bold my-5 leading-tight max-w-6xl mx-auto !font-montserrat animate-element"
+        class="text-4xl mx-auto  text-white md:text-6xl font-bold my-5 leading-tight lg:max-w-6xl  max-w-[95%] !font-montserrat animate-element"
       >
       Residential Building Construction
-Building Your Dream, Brick by Brick
-
+      Building Your Dream, Brick by Brick      
       </h1>
       <p
         bind:this={aboutParagraph}
@@ -249,10 +248,10 @@ Building Your Dream, Brick by Brick
 </section>
 
 <!-- Video Section -->
-<section class="relative -mt-40 mx-[5%] ">
+<section  class="relative lg:-mt-40  -mt-32 mx-[5%] ">
   <div class="relative w-full h-fit">
     <video
-      class="w-full h-[500px] object-cover rounded-4xl"
+      class="w-full md:h-[500px] h-[300px] object-cover rounded-4xl"
       muted
       autoplay
       loop
@@ -264,3 +263,20 @@ Building Your Dream, Brick by Brick
   </div>
 </section>
 
+<!-- Stats Section -->
+<section class="lg:py-20  py-10 flex items-center justify-center">
+  <!-- Stats Section -->
+  <div class="flex lg:w-[70%] justify-between items-center gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20"
+       in:fly={{ y: 30, duration: 800, delay: 400 }}>
+    {#each stats as stat, index}
+      <div class="text-center" bind:this={sections[index]}>
+        <div class="text-3xl md:text-5xl font-bold text-primary mb-2">
+          {displayValues[index]}{stat.label.includes('Success Rate') ? '%' : '+'}
+        </div>
+        <div class="text-sm md:text-base text-primary">
+          {stat.label}
+        </div>
+      </div>
+    {/each}
+  </div>
+</section>
