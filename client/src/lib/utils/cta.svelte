@@ -81,7 +81,7 @@
   }
 </script>
 
-<section bind:this={sectionElement} class="relative z-20 text-white bg-[url('/images/cta.png')] bg-no-repeat bg-cover bg-center">
+<section bind:this={sectionElement} class="relative text-white bg-[url('/images/cta.png')] bg-no-repeat bg-cover bg-center">
   <div class="md:py-20 py-10 container mx-auto lg:px-16">
       <div class="absolute inset-0 bg-black/80"></div>
       

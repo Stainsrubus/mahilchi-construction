@@ -82,7 +82,7 @@
 
 	<!-- Mobile Menu Items -->
 	{#if isMobileMenuOpen}
-		<div class="md:hidden bg-primary text-white px-4 py-2 flex flex-col space-y-2">
+		<div class="md:hidden !bg-primary !z-20  text-white px-4 py-2 flex flex-col space-y-2">
 			{#each navItems as item}
 				<a
 					href={item.href}

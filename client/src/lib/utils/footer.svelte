@@ -90,7 +90,7 @@
 		<!-- Footer Content -->
 		<div class="flex flex-col md:flex-row justify-between gap-8">
 			<!-- Left Section -->
-			<div bind:this={leftSection} class="w-full z-20 md:w-1/4 mb-8 md:mb-0">
+			<div bind:this={leftSection} class="w-full md:w-1/4 mb-8 md:mb-0">
 				<p class="text-gray-600 mb-6">
 					We are a trusted construction company, delivering quality residential, commercial, and industrial projects. Our focus is on strong design, timely completion, and lasting customer satisfaction. Connect with us to build your future.
 				</p>
