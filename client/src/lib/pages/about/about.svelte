@@ -106,7 +106,7 @@
                         <h3 class="text-sm font-semibold text-gray-500">WHO WE ARE</h3>
                     </div>
                     <h1 class="text-4xl font-bold text-primary leading-normal mb-6">
-                        Lorem Ipsum Dummy Content Generator
+                        Building with Purpose, Leading with Integrity
                     </h1>
                 </div>
 
@@ -144,19 +144,20 @@
                             <div class="grid grid-cols-2 gap-5 mt-6">
                                 <div class="flex items-center">
                                     <img src="/svg/tick.svg" alt="">
-                                    <span class="ml-2">2000+ Projects Completed</span>
+                                    <span class="ml-2">Timely Project Delivery</span>
                                 </div>
                                 <div class="flex items-center">
                                     <img src="/svg/tick.svg" alt="">
-                                    <span class="ml-2">100+ Years of Experience</span>
+                                    <span class="ml-2">Strong Client Relationships</span>
                                 </div>
                                 <div class="flex items-center">
                                     <img src="/svg/tick.svg" alt="">
-                                    <span class="ml-2">250+ Awards Won</span>
+                                    <span class="ml-2">Skilled & Dedicated Team
+                                    </span>
                                 </div>
                                 <div class="flex items-center">
                                     <img src="/svg/tick.svg" alt="">
-                                    <span class="ml-2">1000+ Happy Customers</span>
+                                    <span class="ml-2">Innovative Design Solutions</span>
                                 </div>
                             </div>
                         </Tabs.Content>
@@ -165,7 +166,7 @@
                             <p class="leading-loose">
                                 To be the most trusted and innovative partner in the construction industry, delivering projects that stand as benchmarks of quality, sustainability, and excellence — across residential, commercial, and industrial sectors.
                             </p>
-                            <div class="grid grid-cols-2 gap-5 mt-6">
+                            <!-- <div class="grid grid-cols-2 gap-5 mt-6">
                                 <div class="flex items-center">
                                     <img src="/svg/tick.svg" alt="">
                                     <span class="ml-2">2000+ Projects Completed</span>
@@ -182,7 +183,7 @@
                                     <img src="/svg/tick.svg" alt="">
                                     <span class="ml-2">1000+ Happy Customers</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </Tabs.Content>
 
                         <Tabs.Content value="values" class="mt-6">
@@ -194,7 +195,7 @@
                                 Partnership – Growing together with clients, employees, and communities.<br />
                                 
                             </p>
-                            <div class="grid grid-cols-2 gap-5 mt-6">
+                            <!-- <div class="grid grid-cols-2 gap-5 mt-6">
                                 <div class="flex items-center">
                                     <img src="/svg/tick.svg" alt="">
                                     <span class="ml-2">2000+ Projects Completed</span>
@@ -211,7 +212,7 @@
                                     <img src="/svg/tick.svg" alt="">
                                     <span class="ml-2">1000+ Happy Customers</span>
                                 </div>
-                            </div>
+                            </div> -->
                         </Tabs.Content>
                     </div>
                 </Tabs.Root>

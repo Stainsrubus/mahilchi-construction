@@ -105,10 +105,10 @@
 			<div bind:this={linksSection} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Website Links</h3>
 				<ul class="space-y-2">
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Home</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">About</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Services</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Contact</a></li>
+					<li><a href="/" class="text-gray-600 hover:text-blue-600">Home</a></li>
+					<li><a href="/about" class="text-gray-600 hover:text-blue-600">About</a></li>
+					<li><a href="/services" class="text-gray-600 hover:text-blue-600">Services</a></li>
+					<li><a href="/contact" class="text-gray-600 hover:text-blue-600">Contact</a></li>
 				</ul>
 			</div>
 
@@ -153,8 +153,8 @@
 
 		<!-- Footer Bottom -->
 		<div class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-			<p>©2025 Wenoxo Technologies. All rights reserved
-			</p>
+			<a href="https://www.wenoxo.in/" target="_blank">©2025 Wenoxo Technologies. All rights reserved
+			</a>
 		</div>
 	</div>
 </footer>

@@ -145,7 +145,7 @@
         <!-- Header Content -->
         <div bind:this={headerContent} class="text-center mb-6 md:mb-8">
             <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-primary mb-3 md:mb-4">Any Questions? Look Here.</h2>
-            <p class="text-[#152F45E5] text-sm sm:text-base mb-4 md:mb-6">Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing</p>
+            <p class="text-[#152F45E5] text-sm sm:text-base mb-4 md:mb-6">Explore our FAQs to know more about how we can support your project.</p>
         </div>
 
         <!-- Custom Button Tabs -->

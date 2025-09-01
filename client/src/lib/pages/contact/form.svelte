@@ -197,9 +197,18 @@
       </p>
 
       <div class="flex flex-col sm:flex-row justify-between gap-4 sm:gap-6">
-        <div class="flex items-center text-gray-600">
+        <div class="flex flex-col gap-2 items-start text-gray-600">
+        <div class="flex   items-start">
           <Icon icon="cil:location-pin" width="20" height="20" class="mr-2" />
-          <p class="text-sm sm:text-base">1234 Main Street, Anytown, USA 12345</p>
+          <p class="text-sm sm:text-base">3/11, vasavi Arcade,2nd Floor,
+            <br />Anna bus stand (Behind Star residency),<br />
+            Madurai - 625020.</p>
+        </div>
+        <div class="flex  items-start">
+          <Icon icon="cil:location-pin" width="20" height="20" class="mr-2" />
+          <p class="text-sm sm:text-base">25, Katcheri Road, K.V.S. Compound,
+           <br /> Virudhunagar- 626001.</p>
+        </div>
         </div>
         <div class="flex items-center text-gray-600">
           <Icon icon="cil:clock" width="20" height="20" class="mr-2" />
