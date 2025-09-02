@@ -8,8 +8,8 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home1.png",
-            "full": "/images/home1.png"
+            "thumbnail": "/images/home4.webp",
+            "full": "/images/home4.webp"
           },
           {
             "id": 2,
@@ -27,7 +27,7 @@
             "full": "/images/home.png"
           }
         ],
-        "mainImage": "/images/interior3.png"
+        "mainImage": "/images/home4.webp"
       },
       {
         "id": 2,

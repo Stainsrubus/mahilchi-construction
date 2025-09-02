@@ -47,8 +47,8 @@
 
 <nav class="bg-primary text-white fixed w-full z-10" in:fade={{ duration: 500 }} out:fade={{ duration: 500 }}>
 	<div class="container mx-auto h-16 lg:px-4 md:px-1 px-4 py-3 flex justify-between items-center">
-		<div class="text-xl font-bold">
-			<img src="/images/Logo.png" class="lg:h-10 md:h-8 h-10" alt="">
+		<div class="text-xl font-bold " on:click={() => goto('/')}>
+			<img src="/images/logo4.png" class="lg:h-10 md:h-10 h-10" alt="">
 		</div>
 
 		<!-- Desktop Menu -->

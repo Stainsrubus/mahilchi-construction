@@ -19,7 +19,7 @@
         tag: "Industrial Building Construction",
         title: "Constructing the Future of Industry",
         description: "We specialize in building strong and efficient industrial facilities like warehouses, factories, and plants. With a focus on safety, productivity, and durability, we deliver solutions that support your business growth for years to come.",
-        image: "/images/interior3.png",
+        image: "/images/home4.webp",
         alt: "Modern industrial building"
       }
     ];

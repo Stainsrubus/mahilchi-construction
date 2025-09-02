@@ -249,14 +249,14 @@
 
 <!-- Video Section -->
 <section  class="relative container md:mx-auto lg:-mt-40 md:-mt-44 -mt-36 px-[5%] ">
-  <div class="relative w-full h-fit">
+  <div class="relative w-full h-fit" style="pointer-events: none;">
     <video
       class="w-full md:h-[500px] h-[300px] object-cover md:rounded-4xl rounded-2xl"
       muted
       autoplay
       loop
       playsinline
-      src="/video/construction2.webm"
+      src="/video/video1.webm"
       type="video/*"
       preload="auto"
     ></video>
