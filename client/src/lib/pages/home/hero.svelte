@@ -40,7 +40,7 @@
               }
             });
           },
-          { threshold: 0.5 }
+          { threshold: 0.2 }
         );
   
         if (sections[index]) {
@@ -247,8 +247,9 @@
     </div>
   </section>
   
-  <!-- Video Section -->
-  <section  class="relative container md:mx-auto lg:-mt-40 md:-mt-44 -mt-36 px-[5%] ">
+ <div class="bg-gray-100">
+   <!-- Video Section -->
+   <section  class="relative container md:mx-auto lg:-mt-40 md:-mt-44 -mt-36 px-[5%] ">
     <div class="relative w-full h-fit" style="pointer-events: none;">
       <video
         class="w-full md:h-[500px] h-[300px] object-cover md:rounded-4xl rounded-2xl"
@@ -263,21 +264,35 @@
     </div>
   </section>
   
-  <!-- Stats Section -->
-  <section class="lg:py-20  py-10 flex items-center justify-center">
+<div class="lg:py-20   py-10">
     <!-- Stats Section -->
-    <div class="md:flex w-full lg:w-[70%] grid grid-cols-2 md:justify-between md:items-center gap-x-2 gap-y-10 md:gap-x-10 md:gap-y-20"
-         in:fly={{ y: 30, duration: 800, delay: 400 }}>
-      {#each stats as stat, index}
-        <div class="text-center" bind:this={sections[index]}>
-          <div class="text-5xl font-bold text-primary mb-2">
-            {displayValues[index]}{stat.label.includes('Success Rate') ? '%' : '+'}
-          </div>
-          <div class="text-base text-primary">
-            {stat.label}
-          </div>
-        </div>
-      {/each}
-    </div>
-  </section>
+    <p class="text-[#152F45E5] text-center pb-10 ">
+      Accredited and Certified to Provide World-Class Construction Solutions You Can Depend On
+    </p>
+    <section class=" flex items-center justify-center">
+      <!-- Stats Section -->
+      
+      <div class="flex flex-col md:flex-row px-[5%] flex-wrap w-full lg:w-[70%] md:justify-between md:items-center gap-x-2 gap-y-10 md:gap-x-10 md:gap-y-20"
+           in:fly={{ y: 30, duration: 800, delay: 400 }}>
+  
+           <div class="flex  items-center gap-4">
+  <img src="/images/iso2.png" class="h-20 w-20" alt="">
+  <p class="text-primary font-semibold text-lg leading-relaxed">ISO 9001 Quality<br /> management</p>
+     </div>
+     <div class="flex items-center gap-4">
+      <img src="/images/iso1.png" class="h-20 w-22" alt="">
+      <p class="text-primary font-semibold text-lg leading-relaxed">ISO 14001 Environmental <br /> management system</p>
+         </div>
+         <div class="flex items-center gap-4">
+          <img src="/images/iso1.png" class="h-20 w-22" alt="">
+          <p class="text-primary font-semibold text-lg leading-relaxed">ISO 14001 Environmental <br/> management system</p>
+             </div>
+             <div class="flex items-center gap-4">
+              <img src="/images/iso2.png" class="h-20 w-20" alt="">
+              <p class="text-primary font-semibold text-lg leading-relaxed">ISO 9001 Quality<br /> management</p>
+                 </div>
+      </div>
+    </section>
+</div>
+ </div>
   
