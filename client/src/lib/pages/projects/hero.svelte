@@ -40,7 +40,7 @@
             }
           });
         },
-        { threshold: 0.5 }
+        { threshold: 0.1 }
       );
 
       if (sections[index]) {
@@ -143,18 +143,18 @@
       if (el) {
         el.style.opacity = '0';
         el.style.transform = 'translateY(50px)';
-        el.style.transition = 'all 0.8s ease-out';
+        el.style.transition = 'all 0.5s ease-out';
       }
     });
   }
 
   function animateInAbout() {
     const elements = [
-       { el: about, delay: 200 },
-      { el: aboutHeading, delay: 200 },
-      { el: aboutParagraph, delay: 300 },
-      { el: aboutImages[0], delay: 500 },
-      { el: aboutImages[1], delay: 700 }
+       { el: about, delay: 100 },
+      { el: aboutHeading, delay: 100 },
+      { el: aboutParagraph, delay: 200 },
+      { el: aboutImages[0], delay: 300 },
+      { el: aboutImages[1], delay: 300 }
     ];
 
     elements.forEach(({ el, delay }) => {
@@ -210,24 +210,24 @@
 
 
     <div       bind:this={about}  class="animate-element">
-      <h1  
+      <!-- <h1  
 
       class="bg-[#163A59] text-[#88A1B1]  border-[#88A1B1] w-fit border px-4 py-2 rounded-full  ">
    Projects
-      </h1>
+      </h1> -->
     </div>
    
       <h1
         bind:this={aboutHeading}
         class="text-4xl text-white md:text-6xl font-bold my-5 leading-tight max-w-6xl mx-auto !font-montserrat animate-element"
       >
- Lets Connect With Us
+      Building Today for a Stronger Tomorrow
       </h1>
       <p
         bind:this={aboutParagraph}
         class="text-base max-w-lg mx-auto !font-montserrat text-[#88A1B1] animate-element"
       >
-      Our team blends architectural creativity, modern engineering, & project management expertise to build durable 
+      Each project reflects our commitment to precision, durability, and customer satisfaction.
       </p>
     </div>
 

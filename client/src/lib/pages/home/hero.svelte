@@ -221,14 +221,13 @@
           bind:this={aboutHeading}
           class="text-4xl mx-auto  text-white md:text-6xl font-bold my-5 leading-tight lg:max-w-6xl  max-w-[95%] !font-montserrat animate-element"
         >
-        Building with Vision, Delivering with Trust
+        Strong Structures, Stronger Trust
         </h1>
         <p
           bind:this={aboutParagraph}
           class="text-base max-w-lg mx-auto !font-montserrat text-[#88A1B1] animate-element"
         >
-        We specialize in creating durable, modern, and sustainable construction solutions with a strong focus on design excellence and project management expertise.
-
+        Mahilchi Associate – building homes, offices, and communities with excellence.
         </p>
       </div>
   

@@ -210,11 +210,11 @@
 
 
     <div       bind:this={about}  class="animate-element">
-      <h1  
+      <!-- <h1  
 
       class="bg-[#163A59] text-[#88A1B1]  border-[#88A1B1] w-fit border px-4 py-2 rounded-full  ">
    Contact Us
-      </h1>
+      </h1> -->
     </div>
    
       <h1
