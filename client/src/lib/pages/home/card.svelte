@@ -15,7 +15,8 @@
      <div>
         <h3 class="text-xl md:text-3xl w-[60%] font-medium  mb-2">Residential Construction</h3>
         <p class="text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Homes built with care, blending comfort, style, and durability. Every design reflects modern living while ensuring lasting value. A perfect balance of elegance and functionality for your lifestyle.
+
         </p>
      </div>
     </div>
@@ -25,7 +26,7 @@
       <div>
         <h3 class="text-xl md:text-3xl w-[60%] font-medium mb-2">Commercial Construction</h3>
       <p class="text-gray-600">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Spaces that drive business growth through smart design and solid structure. From offices to retail outlets, every project is crafted for performance. A professional setting that motivates success and innovation.
       </p>
       </div>
     </div>
@@ -35,7 +36,7 @@
      <div>
         <h3 class="text-xl md:text-3xl w-[60%] font-medium mb-2">Industrial Construction</h3>
         <p class="text-gray-600">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Facilities engineered to handle productivity with strength and precision. Safe, efficient, and built to meet industrial demands. A strong foundation for industries to scale and grow.
         </p>
      </div>
     </div>

@@ -256,7 +256,7 @@
         autoplay
         loop
         playsinline
-        src="/video/video2.webm"
+        src="/video/home.webm"
         type="video/*"
         preload="auto"
       ></video>
