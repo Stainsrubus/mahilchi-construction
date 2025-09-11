@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import Hero from "$lib/pages/home/hero.svelte";
 	
 	import Sites from "$lib/pages/services/sites.svelte";

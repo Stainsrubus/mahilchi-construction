@@ -1,206 +1,211 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
-    import { fly } from 'svelte/transition';
+  import { onMount } from 'svelte';
+  import { fly } from 'svelte/transition';
   
-    // Stats data
-    const stats = [
-      { value: 12, label: 'Years Experience' },
-      { value: 100, label: 'Success Rate' },
-      { value: 50, label: 'Team Members' },
-      { value: 25, label: 'Awards Won' }
-    ];
-  
-    // Display values for counters
-    let displayValues: number[] = [0, 0, 0, 0];
-    let sections: HTMLElement[] = [];
-    let animated = [false,false, false, false, false];
-  
-    // Elements for animations
-    let about:HTMLElement;
-    let aboutSection: HTMLElement;
-    let aboutHeading: HTMLElement;
-    let aboutParagraph: HTMLElement;
-    let aboutImages: HTMLElement[] = [];
-  
-    let videoSection: HTMLElement;
-  
-    onMount(() => {
-      // Setup for stats counters
-      const statObservers = stats.map((_, index) => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting && !animated[index]) {
-                animateCounter(index, stats[index].value);
-                animated[index] = true;
-              } else if (!entry.isIntersecting) {
-                // Reset when out of view
-                displayValues[index] = 0;
-                animated[index] = false;
-              }
-            });
-          },
-          { threshold: 0.2 }
-        );
-  
-        if (sections[index]) {
-          observer.observe(sections[index]);
-        }
-  
-        return observer;
-      });
-  
-      // Setup for About Us section
-      const setupAboutAnimation = () => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                animateInAbout();
-              } else {
-                animateOutAbout();
-              }
-            });
-          },
-          { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
-        );
-  
-        if (aboutSection) {
-          observer.observe(aboutSection);
-        }
-  
-        return observer;
-      };
-  
-      // Setup for Video section
-      const setupVideoAnimation = () => {
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                animateInVideo();
-              } else {
-                animateOutVideo();
-              }
-            });
-          },
-          { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
-        );
-  
-        if (videoSection) {
-          observer.observe(videoSection);
-        }
-  
-        return observer;
-      };
-  
-      const aboutObserver = setupAboutAnimation();
-      const videoObserver = setupVideoAnimation();
-  
-      // Set initial state for About Us section
-      setInitialAboutState();
-  
-      return () => {
-        // Cleanup for stats counters
-        statObservers.forEach((observer, index) => {
-          if (sections[index]) {
-            observer.unobserve(sections[index]);
-          }
-        });
-  
-        // Cleanup for About Us section
-        if (aboutSection) aboutObserver.unobserve(aboutSection);
-  
-        // Cleanup for Video section
-        if (videoSection) videoObserver.unobserve(videoSection);
-      };
+  // Import images and video from src/lib
+  import build1 from '$lib/svg/build1.svg';
+  import build2 from '$lib/svg/build2.svg';
+  import iso1 from '$lib/images/iso1.png';
+  import iso2 from '$lib/images/iso2.png';
+  import homeVideo from '$lib/video/home.webm';
+
+  // Stats data
+  const stats = [
+    { value: 12, label: 'Years Experience' },
+    { value: 100, label: 'Success Rate' },
+    { value: 50, label: 'Team Members' },
+    { value: 25, label: 'Awards Won' }
+  ];
+
+  // Display values for counters
+  let displayValues: number[] = [0, 0, 0, 0];
+  let sections: HTMLElement[] = [];
+  let animated = [false, false, false, false];
+
+  // Elements for animations
+  let about: HTMLElement;
+  let aboutSection: HTMLElement;
+  let aboutHeading: HTMLElement;
+  let aboutParagraph: HTMLElement;
+  let aboutImages: HTMLElement[] = [];
+
+  let videoSection: HTMLElement;
+
+  onMount(() => {
+    // Setup for stats counters
+    const statObservers = stats.map((_, index) => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !animated[index]) {
+              animateCounter(index, stats[index].value);
+              animated[index] = true;
+            } else if (!entry.isIntersecting) {
+              displayValues[index] = 0;
+              animated[index] = false;
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      if (sections[index]) {
+        observer.observe(sections[index]);
+      }
+
+      return observer;
     });
-  
-    function animateCounter(index: number, target: number) {
-      const duration = 1500; // Animation duration in ms
-      const start = 0;
-      const startTime = performance.now();
-  
-      function update(currentTime: number) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        displayValues[index] = Math.floor(progress * target);
-  
-        if (progress < 1) {
-          requestAnimationFrame(update);
-        } else {
-          displayValues[index] = target;
-        }
+
+    // Setup for About Us section
+    const setupAboutAnimation = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateInAbout();
+            } else {
+              animateOutAbout();
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
+      );
+
+      if (aboutSection) {
+        observer.observe(aboutSection);
       }
-  
-      requestAnimationFrame(update);
-    }
-  
-    // About Us section animation functions
-    function setInitialAboutState() {
-      const elements = [aboutHeading, aboutParagraph, ...aboutImages];
-      elements.forEach(el => {
-        if (el) {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(50px)';
-          el.style.transition = 'all 0.8s ease-out';
-        }
-      });
-    }
-  
-    function animateInAbout() {
-      const elements = [
-         { el: about, delay: 200 },
-        { el: aboutHeading, delay: 200 },
-        { el: aboutParagraph, delay: 300 },
-        { el: aboutImages[0], delay: 500 },
-        { el: aboutImages[1], delay: 700 }
-      ];
-  
-      elements.forEach(({ el, delay }) => {
-        if (el) {
-          setTimeout(() => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-          }, delay);
-        }
-      });
-    }
-  
-    function animateOutAbout() {
-      const elements = [about,aboutHeading, aboutParagraph, ...aboutImages];
-      elements.forEach(el => {
-        if (el) {
-          el.style.opacity = '0';
-          el.style.transform = 'translateY(50px)';
-        }
-      });
-    }
-  
-    // Video section animation functions
-    function animateInVideo() {
+
+      return observer;
+    };
+
+    // Setup for Video section
+    const setupVideoAnimation = () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animateInVideo();
+            } else {
+              animateOutVideo();
+            }
+          });
+        },
+        { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
+      );
+
       if (videoSection) {
-        videoSection.style.opacity = '1';
-        videoSection.style.transform = 'translateY(0)';
+        observer.observe(videoSection);
+      }
+
+      return observer;
+    };
+
+    const aboutObserver = setupAboutAnimation();
+    const videoObserver = setupVideoAnimation();
+
+    setInitialAboutState();
+
+    return () => {
+      statObservers.forEach((observer, index) => {
+        if (sections[index]) {
+          observer.unobserve(sections[index]);
+        }
+      });
+      if (aboutSection) aboutObserver.unobserve(aboutSection);
+      if (videoSection) videoObserver.unobserve(videoSection);
+    };
+  });
+
+  function animateCounter(index: number, target: number) {
+    const duration = 1500;
+    const start = 0;
+    const startTime = performance.now();
+
+    function update(currentTime: number) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      displayValues[index] = Math.floor(progress * target);
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        displayValues[index] = target;
       }
     }
-  
-    function animateOutVideo() {
-      if (videoSection) {
-        videoSection.style.opacity = '0';
-        videoSection.style.transform = 'translateY(50px)';
+
+    requestAnimationFrame(update);
+  }
+
+  function setInitialAboutState() {
+    const elements = [aboutHeading, aboutParagraph, ...aboutImages];
+    elements.forEach(el => {
+      if (el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(50px)';
+        el.style.transition = 'all 0.8s ease-out';
       }
+    });
+  }
+
+  function animateInAbout() {
+    const elements = [
+      { el: about, delay: 200 },
+      { el: aboutHeading, delay: 200 },
+      { el: aboutParagraph, delay: 300 },
+      { el: aboutImages[0], delay: 500 },
+      { el: aboutImages[1], delay: 700 }
+    ];
+
+    elements.forEach(({ el, delay }) => {
+      if (el) {
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, delay);
+      }
+    });
+  }
+
+  function animateOutAbout() {
+    const elements = [about, aboutHeading, aboutParagraph, ...aboutImages];
+    elements.forEach(el => {
+      if (el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(50px)';
+      }
+    });
+  }
+
+  function animateInVideo() {
+    if (videoSection) {
+      videoSection.style.opacity = '1';
+      videoSection.style.transform = 'translateY(0)';
     }
-  </script>
-  
-  <style>
-    /* Common animation styles */
-    .animate-element {
-      opacity: 0;
-      transform: translateY(50px);
-      transition: all 0.8s ease-out;
+  }
+
+  function animateOutVideo() {
+    if (videoSection) {
+      videoSection.style.opacity = '0';
+      videoSection.style.transform = 'translateY(50px)';
     }
-  </style>
+  }
+</script>
+
+<!-- Preload critical assets -->
+<svelte:head>
+<link rel="preload" as="image" href={build1} />
+<link rel="preload" as="image" href={build2} />
+<link rel="preload" as="video" href={homeVideo} type="video/webm" />
+</svelte:head>
+
+<style>
+.animate-element {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+</style>
+
   
   <!-- About Us Section -->
   <section bind:this={aboutSection} class="relative flex items-center">
@@ -233,13 +238,13 @@
   
       <img
         bind:this={aboutImages[0]}
-        src="/svg/build1.svg"
+        src={build1}
         alt="Modern luxury home at sunset"
         class="absolute h-3/4 md:block hidden left-0 bottom-0 object-contain animate-element"
       />
       <img
         bind:this={aboutImages[1]}
-        src="/svg/build2.svg"
+        src={build2}
         alt="Modern luxury home at sunset"
         class="absolute h-3/4 md:block hidden right-0 bottom-0 object-contain animate-element"
       />
@@ -255,9 +260,10 @@
         muted
         autoplay
         loop
+    
         playsinline
-        src="/video/home.webm"
-        type="video/*"
+        src={homeVideo}
+        type="video/webm"
         preload="auto"
       ></video>
     </div>
@@ -275,19 +281,19 @@
            in:fly={{ y: 30, duration: 800, delay: 400 }}>
   
            <div class="flex  items-center gap-4">
-  <img src="/images/iso2.png" class="h-20 w-20" alt="">
+  <img src={iso2} loading="lazy" class="h-20 w-20" alt="">
   <p class="text-primary font-semibold text-lg leading-relaxed">ISO 9001 Quality<br /> management</p>
      </div>
      <div class="flex items-center gap-4">
-      <img src="/images/iso1.png" class="h-20 w-22" alt="">
+      <img src={iso1} loading="lazy" class="h-20 w-22" alt="">
       <p class="text-primary font-semibold text-lg leading-relaxed">ISO 14001 Environmental <br /> management system</p>
          </div>
          <div class="flex items-center gap-4">
-          <img src="/images/iso1.png" class="h-20 w-22" alt="">
+          <img src={iso1} loading="lazy" class="h-20 w-22" alt="">
           <p class="text-primary font-semibold text-lg leading-relaxed">ISO 14001 Environmental <br/> management system</p>
              </div>
              <div class="flex items-center gap-4">
-              <img src="/images/iso2.png" class="h-20 w-20" alt="">
+              <img src={iso2} loading="lazy" class="h-20 w-20" alt="">
               <p class="text-primary font-semibold text-lg leading-relaxed">ISO 9001 Quality<br /> management</p>
                  </div>
       </div>
