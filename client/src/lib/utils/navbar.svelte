@@ -65,11 +65,9 @@ import logo from '$lib/images/logo4.png';
 				</a>
 			{/each}
 
-			<button
-				class="rounded-full py-[10px] px-[22px] text-xs text-nowrap bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium lg:text-base"
-			>
+			<a href="tel:+919842814171" class="rounded-full py-[10px] px-[22px] text-xs text-nowrap bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium lg:text-base">
 				+91 98428 14171
-			</button>
+			</a>
 		</div>
 
 		<!-- Mobile Menu Button -->
@@ -94,11 +92,9 @@ import logo from '$lib/images/logo4.png';
 					{item.label}
 				</a>
 			{/each}
-			<button
-				class="rounded-full py-[10px] px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base w-fit"
-			>
-				+91 1234567890
-			</button>
+				<a href="tel:+919842814171" class="rounded-full py-[10px] px-[22px] w-fit text-sm text-nowrap bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium lg:text-base">
+				+91 98428 14171
+			</a>
 		</div>
 	{/if}
 </nav>

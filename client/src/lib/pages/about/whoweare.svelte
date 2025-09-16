@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
     import engineerImage from "$lib/images/engineer.png";
     import isoImage from "$lib/svg/iso.svg";
+	import { goto } from "$app/navigation";
 
     let sectionElement: HTMLElement;
     let leftContent: HTMLElement;
@@ -116,7 +117,11 @@
                     </p>
                 </div>
 
-                <button class="rounded-full py-[10px] px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base flex items-center gap-2 hover:scale-105 transition-transform duration-200">
+                <button 
+                      on:click={() => {
+                  goto('/services');
+              }}
+               class="rounded-full py-[10px] px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base flex items-center gap-2 hover:scale-105 transition-transform duration-200">
                     View Services
                     <Icon icon="solar:arrow-right-linear" width="24" height="24" />
                 </button>

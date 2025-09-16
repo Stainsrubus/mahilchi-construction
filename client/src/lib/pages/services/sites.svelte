@@ -5,14 +5,14 @@
         tag: "Residential Building Construction",
         title: "Building Your Dream, Brick by Brick",
         description: "We build beautiful, durable homes that blend modern designs with traditional layouts. With quality work, strong structures, and on-time delivery, we create safe and comfortable spaces for your family.",
-        image: "/images/interior1.png",
+        image: "/images/interior1.webp",
         alt: "Modern residential house"
       },
       {
         tag: "Commercial Building Construction",
         title: "Spaces That Empower Business",
         description: "We design and build professional spaces that support business growth from offices and shops to large complexes. With smart design, reliable construction, and on-time delivery, we create safe, lasting spaces for your success.",
-        image: "/images/interior2.png",
+        image: "/images/interior2.webp",
         alt: "Modern commercial building"
       },
       {
