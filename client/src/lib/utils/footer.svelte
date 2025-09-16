@@ -120,20 +120,20 @@
 			<div bind:this={services1} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Services</h3>
 				<ul class="space-y-2">
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Home Renovation</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Architecture</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Interior Design</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Consultation</a></li>
+					<li>Home Renovation</li>
+					<li>Architecture</li>
+					<li>Interior Design</li>
+					<li>Consultation</li>
 				</ul>
 			</div>
 			<!-- Services 2 -->
 			<div bind:this={services2} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Services</h3>
 				<ul class="space-y-2">
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Exterior Design</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Landscaping</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Project Management</a></li>
-					<li><a href="#" class="text-gray-600 hover:text-blue-600">Custom Solutions</a></li>
+					<li>Exterior Design</li>
+					<li>Landscaping</li>
+					<li>Project Management</li>
+					<li>Custom Solutions</li>
 				</ul>
 			</div>
 			<!-- Top Projects -->
