@@ -8,26 +8,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/src/lib/images/project-11.webp",
-            "full": "/src/lib/images/project-11.webp"
+            "thumbnail": "/images/project-11.webp",
+            "full": "/images/project-11.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/src/lib/images/project-12.webp",
-            "full": "/src/lib/images/project-12.webp"
+            "thumbnail": "/images/project-12.webp",
+            "full": "/images/project-12.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/src/lib/images/project-13.webp",
-            "full": "/src/lib/images/project-13.webp"
+            "thumbnail": "/images/project-13.webp",
+            "full": "/images/project-13.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/src/lib/images/project-14.webp",
-            "full": "/src/lib/images/project-14.webp"
+            "thumbnail": "/images/project-14.webp",
+            "full": "/images/project-14.webp"
           }
         ],
-        "mainImage": "/src/lib/images/project-11.webp"
+        "mainImage": "/images/project-11.webp"
       },
       {
         "id": 2,
@@ -37,26 +37,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/src/lib/images/project-21.webp",
-            "full": "/src/lib/images/project-21.webp"
+            "thumbnail": "/images/project-21.webp",
+            "full": "/images/project-21.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/src/lib/images/project-22.webp",
-            "full": "/src/lib/images/project-22.webp"
+            "thumbnail": "/images/project-22.webp",
+            "full": "/images/project-22.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/src/lib/images/project-23.webp",
-            "full": "/src/lib/images/project-23.webp"
+            "thumbnail": "/images/project-23.webp",
+            "full": "/images/project-23.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/src/lib/images/project-24.webp",
-            "full": "/src/lib/images/project-24.webp"
+            "thumbnail": "/images/project-24.webp",
+            "full": "/images/project-24.webp"
           }
         ],
-        "mainImage": "/src/lib/images/project-21.webp"
+        "mainImage": "/images/project-21.webp"
       },
       {
         "id": 3,
@@ -66,26 +66,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/src/lib/images/project-31.webp",
-            "full": "/src/lib/images/project-31.webp"
+            "thumbnail": "/images/project-31.webp",
+            "full": "/images/project-31.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/src/lib/images/project-32.webp",
-            "full": "/src/lib/images/project-32.webp"
+            "thumbnail": "/images/project-32.webp",
+            "full": "/images/project-32.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/src/lib/images/project-33.webp",
-            "full": "/src/lib/images/project-33.webp"
+            "thumbnail": "/images/project-33.webp",
+            "full": "/images/project-33.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/src/lib/images/project-34.webp",
-            "full": "/src/lib/images/project-34.webp"
+            "thumbnail": "/images/project-34.webp",
+            "full": "/images/project-34.webp"
           }
         ],
-        "mainImage": "/src/lib/images/project-31.webp"
+        "mainImage": "/images/project-31.webp"
       },
       {
         "id": 4,
@@ -95,26 +95,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/src/lib/images/project-41.webp",
-            "full": "/src/lib/images/project-41.webp"
+            "thumbnail": "/images/project-41.webp",
+            "full": "/images/project-41.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/src/lib/images/project-42.webp",
-            "full": "/src/lib/images/project-42.webp"
+            "thumbnail": "/images/project-42.webp",
+            "full": "/images/project-42.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/src/lib/images/project-43.webp",
-            "full": "/src/lib/images/project-43.webp"
+            "thumbnail": "/images/project-43.webp",
+            "full": "/images/project-43.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/src/lib/images/project-44.webp",
-            "full": "/src/lib/images/project-44.webp"
+            "thumbnail": "/images/project-44.webp",
+            "full": "/images/project-44.webp"
           }
         ],
-        "mainImage": "/src/lib/images/project-41.webp"
+        "mainImage": "/images/project-41.webp"
       }
     ]
   }
