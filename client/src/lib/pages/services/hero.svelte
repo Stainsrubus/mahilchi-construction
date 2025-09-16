@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
+  import build1 from "$lib/svg/build1.svg";
+  import build2 from "$lib/svg/build2.svg";
+  import video1 from "$lib/video/video1.webm";
 
   // Stats data
   const stats = [
@@ -13,15 +16,13 @@
   // Display values for counters
   let displayValues: number[] = [0, 0, 0, 0];
   let sections: HTMLElement[] = [];
-  let animated = [false,false, false, false, false];
-
+  let animated = [false, false, false, false];
   // Elements for animations
-  let about:HTMLElement;
+  let about: HTMLElement;
   let aboutSection: HTMLElement;
   let aboutHeading: HTMLElement;
   let aboutParagraph: HTMLElement;
   let aboutImages: HTMLElement[] = [];
-
   let videoSection: HTMLElement;
 
   onMount(() => {
@@ -42,11 +43,9 @@
         },
         { threshold: 0.5 }
       );
-
       if (sections[index]) {
         observer.observe(sections[index]);
       }
-
       return observer;
     });
 
@@ -64,11 +63,9 @@
         },
         { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
       );
-
       if (aboutSection) {
         observer.observe(aboutSection);
       }
-
       return observer;
     };
 
@@ -86,11 +83,9 @@
         },
         { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
       );
-
       if (videoSection) {
         observer.observe(videoSection);
       }
-
       return observer;
     };
 
@@ -107,10 +102,8 @@
           observer.unobserve(sections[index]);
         }
       });
-
       // Cleanup for About Us section
       if (aboutSection) aboutObserver.unobserve(aboutSection);
-
       // Cleanup for Video section
       if (videoSection) videoObserver.unobserve(videoSection);
     };
@@ -125,20 +118,18 @@
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       displayValues[index] = Math.floor(progress * target);
-
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
         displayValues[index] = target;
       }
     }
-
     requestAnimationFrame(update);
   }
 
   // About Us section animation functions
   function setInitialAboutState() {
-    const elements = [aboutHeading, aboutParagraph, ...aboutImages];
+    const elements = [about, aboutHeading, aboutParagraph, ...aboutImages];
     elements.forEach(el => {
       if (el) {
         el.style.opacity = '0';
@@ -150,13 +141,12 @@
 
   function animateInAbout() {
     const elements = [
-       { el: about, delay: 200 },
+      { el: about, delay: 200 },
       { el: aboutHeading, delay: 200 },
       { el: aboutParagraph, delay: 300 },
       { el: aboutImages[0], delay: 500 },
       { el: aboutImages[1], delay: 700 }
     ];
-
     elements.forEach(({ el, delay }) => {
       if (el) {
         setTimeout(() => {
@@ -168,7 +158,7 @@
   }
 
   function animateOutAbout() {
-    const elements = [about,aboutHeading, aboutParagraph, ...aboutImages];
+    const elements = [about, aboutHeading, aboutParagraph, ...aboutImages];
     elements.forEach(el => {
       if (el) {
         el.style.opacity = '0';
@@ -202,53 +192,60 @@
   }
 </style>
 
+<svelte:head>
+  <link rel="preload" as="image" href={build1} />
+  <link rel="preload" as="image" href={build2} />
+  <link rel="preload" as="video" href={video1} type="video/webm" />
+</svelte:head>
+
 <!-- About Us Section -->
 <section bind:this={aboutSection} class="relative flex items-center">
   <div class="relative bg-primary md:h-[563px] h-[500px] p-0 w-screen">
     <div class="my-10 flex flex-col items-center justify-center text-center">
+      <div bind:this={about} class="animate-element">
+        <!-- Uncomment if needed
+        <h1 class="bg-[#163A59] text-[#88A1B1] border-[#88A1B1] w-fit border px-4 py-2 rounded-full">
+          Services
+        </h1>
+        -->
+      </div>
 
-
-
-    <div       bind:this={about}  class="animate-element">
-      <!-- <h1  
-
-      class="bg-[#163A59] text-[#88A1B1]  border-[#88A1B1] w-fit border px-4 py-2 rounded-full  ">
-        Services
-      </h1> -->
-    </div>
-   
       <h1
         bind:this={aboutHeading}
-        class="text-4xl mx-auto  text-white md:text-6xl font-bold my-5 leading-tight lg:max-w-6xl  max-w-[95%] !font-montserrat animate-element"
+        class="text-4xl mx-auto text-white md:text-6xl font-bold my-5 leading-tight lg:max-w-6xl max-w-[95%] !font-montserrat animate-element"
       >
-      Residential Building Construction
-      Building Your Dream, Brick by Brick      
+        Residential Building Construction<br />
+        Building Your Dream, Brick by Brick
       </h1>
+
       <p
         bind:this={aboutParagraph}
         class="text-base max-w-lg mx-auto !font-montserrat text-[#88A1B1] animate-element"
       >
-      We build beautiful, durable homes that blend modern designs with traditional layouts. With quality work, strong structures, and on-time delivery, we create safe and comfortable spaces for your family.
+        We build beautiful, durable homes that blend modern designs with traditional layouts. With quality work, strong structures, and on-time delivery, we create safe and comfortable spaces for your family.
       </p>
     </div>
 
     <img
       bind:this={aboutImages[0]}
-      src="/svg/build1.svg"
+      src={build1}
       alt="Modern luxury home at sunset"
+      loading="lazy"
       class="absolute h-3/4 left-0 md:block hidden bottom-0 object-contain animate-element"
     />
+
     <img
       bind:this={aboutImages[1]}
-      src="/svg/build2.svg"
+      src={build2}
       alt="Modern luxury home at sunset"
+      loading="lazy"
       class="absolute h-3/4 right-0 md:block hidden bottom-0 object-contain animate-element"
     />
   </div>
 </section>
 
 <!-- Video Section -->
-<section  class="relative container md:mx-auto lg:-mt-40 md:-mt-44 -mt-36 px-[5%] ">
+<section class="relative container md:mx-auto lg:-mt-40 md:-mt-44 -mt-36 px-[5%]">
   <div class="relative w-full h-fit" style="pointer-events: none;">
     <video
       class="w-full md:h-[500px] h-[300px] object-cover md:rounded-4xl rounded-2xl"
@@ -256,18 +253,19 @@
       autoplay
       loop
       playsinline
-      src="/video/video1.webm"
-      type="video/*"
       preload="auto"
-    ></video>
+    >
+      <source src={video1} type="video/webm" />
+    </video>
   </div>
 </section>
 
 <!-- Stats Section -->
-<section class="lg:py-20  py-10 flex items-center justify-center">
-  <!-- Stats Section -->
-  <div class="flex lg:w-[70%] justify-between items-center gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20"
-       in:fly={{ y: 30, duration: 800, delay: 400 }}>
+<section class="lg:py-20 py-10 flex items-center justify-center">
+  <div
+    class="flex lg:w-[70%] justify-between items-center gap-x-5 gap-y-10 md:gap-x-10 md:gap-y-20"
+    in:fly={{ y: 30, duration: 800, delay: 400 }}
+  >
     {#each stats as stat, index}
       <div class="text-center" bind:this={sections[index]}>
         <div class="text-3xl md:text-5xl font-bold text-primary mb-2">

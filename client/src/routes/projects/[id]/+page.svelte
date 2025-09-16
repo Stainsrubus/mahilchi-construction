@@ -8,13 +8,13 @@
   // Import your JSON data
   import productsData from '$lib/utils/productData.json';
   import Cta from '$lib/utils/cta.svelte';
-	import { goto } from '$app/navigation';
+  import { goto } from '$app/navigation';
 
   // State variables
   let product: any = null;
   let showDialog = false;
-  let currentImageIndex = 0;
-  let currentMainIndex = 0;
+  let currentImageIndex = 0; // For dialog
+  let currentMainIndex = 0; // For desktop layout
   let isLoading = true;
   let error: any = null;
   const mapUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.2153999999996!2d-73.98784492416498!3d40.74844097138957!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e19abd59c8e3!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus";
@@ -30,6 +30,9 @@
       if (!product) {
         throw new Error('Product not found');
       }
+      // Initialize currentMainIndex with the index of the mainImage
+      currentMainIndex = product.images.findIndex(img => img.full === product.mainImage);
+      if (currentMainIndex === -1) currentMainIndex = 0; // Fallback to first image if not found
     } catch (err: any) {
       error = err.message;
     } finally {
@@ -59,10 +62,32 @@
 
   // Update main image when thumbnail is clicked
   function updateMainImage(index: number) {
-    currentMainIndex = index;
-    product.mainImage = product.images[index].full;
+    currentMainIndex = index; // Update the main index for desktop layout
+    product.mainImage = product.images[index].full; // Update the main image URL
+    if (showDialog) {
+      currentImageIndex = index; // Sync dialog if open
+    }
+  }
+
+  // Handle keyboard navigation in dialog
+  function handleKeyDown(event: KeyboardEvent) {
+    if (!showDialog) return;
+
+    if (event.key === 'Escape') {
+      closeDialog();
+      event.preventDefault();
+    } else if (event.key === 'ArrowRight') {
+      nextImage();
+      event.preventDefault();
+    } else if (event.key === 'ArrowLeft') {
+      prevImage();
+      event.preventDefault();
+    }
   }
 </script>
+
+<!-- Add event listener for keyboard navigation -->
+<svelte:window on:keydown={handleKeyDown} />
 
 {#if isLoading}
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -80,51 +105,77 @@
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Project Header -->
     <div class="mb-8 flex items-center gap-4">
-        <button
+      <button
         on:click={() => goto(`/projects`)}
-				class="rounded-full flex justify-center items-center h-10 w-10 text-xs text-nowrap bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium lg:text-base"
-			>
-      <Icon icon="material-symbols:chevron-left-rounded" width="32" height="32" />
-			</button>
-
-    
-<div>
-  <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2 ml-auto">
-    {product.category}
-  </p>
-<h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">{product.title}</h1>
-</div>
-
+        class="rounded-full flex justify-center items-center h-10 w-10 text-xs text-nowrap bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium lg:text-base"
+      >
+        <Icon icon="material-symbols:chevron-left-rounded" width="32" height="32" />
+      </button>
+      <div>
+        <p class="text-sm font-medium text-gray-500 uppercase tracking-wider mb-2 ml-auto">
+          {product.category}
+        </p>
+        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">{product.title}</h1>
+      </div>
     </div>
 
+    <!-- Mobile Layout (sm and below) -->
+    <div class="block lg:hidden mb-12">
+      <!-- Main Image -->
+      <div class="mb-8 rounded-lg overflow-hidden shadow-lg">
+        <img
+          src={product?.mainImage}
+          alt={product.title}
+          class="w-full h-64 sm:h-80 md:h-96 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
+          on:click={() => openDialog(currentMainIndex)}
+        />
+      </div>
 
-    <!-- Main Image -->
-    <div class="mb-8 rounded-lg overflow-hidden shadow-lg">
-      <img
-        src={product.mainImage}
-        alt={product.title}
-        class="w-full h-64 sm:h-80 md:h-96 object-cover cursor-pointer transition-transform duration-300 hover:scale-105"
-        on:click={() => openDialog(currentMainIndex)}
-      />
+      <!-- Thumbnail Gallery -->
+      <div class="flex flex-wrap gap-4">
+        {#each product.images as image, index}
+          <div
+            class="rounded-lg overflow-hidden shadow-md cursor-pointer transition-all duration-300 w-20 h-20 hover:shadow-lg"
+            on:click={() => updateMainImage(index)}
+          >
+            <img
+              src={image?.thumbnail}
+              alt={`Thumbnail ${index + 1}`}
+              class="w-full h-full object-cover"
+            />
+          </div>
+        {/each}
+      </div>
     </div>
 
-    <!-- Thumbnail Gallery -->
-    <div class="flex flex-wrap gap-4 mb-12">
-      {#each product.images as image, index}
-        <div
-          class="rounded-lg overflow-hidden shadow-md cursor-pointer transition-all duration-300 w-20 h-20 hover:shadow-lg"
-          on:click={() => {
-            updateMainImage(index);
-            // openDialog(index);
-          }}
-        >
+    <!-- Desktop Layout (lg and above) -->
+    <div class="hidden lg:block mb-12">
+      <div class="flex gap-2 h-[500px]">
+        <!-- Main Square Image -->
+        <div class="w-1/2 flex-shrink-0 rounded-sm overflow-hidden shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105" on:click={() => openDialog(currentMainIndex)}>
           <img
-            src={image.thumbnail}
-            alt={`Thumbnail ${index + 1}`}
-            class="w-full h-full object-cover"
+            src={product?.mainImage}
+            alt={product.title}
+            class="w-full h-full !object-cover"
           />
         </div>
-      {/each}
+
+        <!-- Side Thumbnails (grid layout) -->
+        <div class="grid grid-cols-2 gap-2 w-1/2">
+          {#each product.images as image, index}
+            <div
+              class="rounded-sm overflow-hidden shadow-md cursor-pointer transition-all duration-300 w-full h-full hover:shadow-lg {index === currentMainIndex ? 'border-2 border-orange-500' : ''}"
+              on:click={() => updateMainImage(index)}
+            >
+              <img
+                src={image?.thumbnail}
+                alt={`Thumbnail ${index + 1}`}
+                class="w-full h-full object-cover"
+              />
+            </div>
+          {/each}
+        </div>
+      </div>
     </div>
 
     <!-- Project Description -->
@@ -163,47 +214,66 @@
     transition:fly={{ y: 50, duration: 300, easing: cubicOut }}
   >
     <div
-      class="relative rounded-lg overflow-hidden w-[80%] h-[60vh] md:h-[70vh]  mx-4"
+      class="relative rounded-lg overflow-hidden w-[80%] h-[80vh] mx-4 p-4"
       on:click|stopPropagation
+      on:keydown={handleKeyDown}
+      tabindex="0"
     >
       <!-- Close Button -->
       <button
-        class="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
+        class="absolute top-4 right-4 text-black hover:text-gray-500 rounded-full bg-red-100 z-10"
         on:click={closeDialog}
       >
         <Icon icon="mdi:close" width="24" height="24" />
       </button>
 
       <!-- Main Image in Dialog -->
-      <img
-        src={product.images[currentImageIndex].full}
-        alt={`Image ${currentImageIndex + 1}`}
-        class="w-full h-full object-cover"
-      />
+      <div class="w-full relative h-[80%] mb-4">
+        <img
+          src={product.images[currentImageIndex].full}
+          alt={`Image ${currentImageIndex + 1}`}
+          class="w-full h-full object-cover rounded-md"
+        />
+        <!-- Dots Navigation -->
+        <div class="absolute top-[90%] left-1/2 -translate-x-1/2 flex gap-2">
+          {#each product.images as _, index}
+            <button
+              class="w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer {index === currentImageIndex ? 'bg-orange-500' : 'bg-gray-300'} transition-colors duration-200"
+              on:click={() => { currentImageIndex = index; }}
+            ></button>
+          {/each}
+        </div>
 
-      <!-- Navigation Arrows -->
-      <button
-        class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 sm:p-3 hover:bg-black/70 transition-colors duration-200"
-        on:click={prevImage}
-      >
-        <Icon icon="mdi:chevron-left" class="w-6 h-6 sm:w-8 sm:h-8" />
-      </button>
-      <button
-        class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 sm:p-3 hover:bg-black/70 transition-colors duration-200"
-        on:click={nextImage}
-      >
-        <Icon icon="mdi:chevron-right" class="w-6 h-6 sm:w-8 sm:h-8" />
-      </button>
-
-      <!-- Dots Navigation -->
-      <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        {#each product.images as _, index}
-          <button
-            class="w-2 h-2 sm:w-3 sm:h-3 rounded-full cursor-pointer {index === currentImageIndex ? 'bg-white' : 'bg-white/50'}"
-            on:click={() => { currentImageIndex = index; }}
-          ></button>
-        {/each}
+        <!-- Navigation Arrows -->
+        <button
+          class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 sm:p-3 hover:bg-black/70 transition-colors duration-200"
+          on:click|stopPropagation={prevImage}
+        >
+          <Icon icon="mdi:chevron-left" class="w-6 h-6 sm:w-8 sm:h-8" />
+        </button>
+        <button
+          class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 text-white bg-black/50 rounded-full p-2 sm:p-3 hover:bg-black/70 transition-colors duration-200"
+          on:click|stopPropagation={nextImage}
+        >
+          <Icon icon="mdi:chevron-right" class="w-6 h-6 sm:w-8 sm:h-8" />
+        </button>
       </div>
+
+      <!-- Thumbnail Gallery -->
+      <!-- <div class="flex gap-2 overflow-x-auto justify-center mb-4">
+        {#each product.images as image, index}
+          <div
+            class="rounded-md overflow-hidden h-20 w-20 shadow-md cursor-pointer transition-all duration-300 w-20 h-full flex-shrink-0 hover:shadow-lg {index === currentImageIndex ? 'border-2 border-orange-500' : ''}"
+            on:click={() => updateMainImage(index)}
+          >
+            <img
+              src={image?.thumbnail}
+              alt={`Thumbnail ${index + 1}`}
+              class="h-20 w-20 object-cover"
+            />
+          </div>
+        {/each}
+      </div> -->
     </div>
   </div>
 {/if}

@@ -8,26 +8,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home4.webp",
-            "full": "/images/home4.webp"
+            "thumbnail": "/src/lib/images/project-11.webp",
+            "full": "/src/lib/images/project-11.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home2.png"
+            "thumbnail": "/src/lib/images/project-12.webp",
+            "full": "/src/lib/images/project-12.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home3.png",
-            "full": "/images/home3.png"
+            "thumbnail": "/src/lib/images/project-13.webp",
+            "full": "/src/lib/images/project-13.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home.png"
+            "thumbnail": "/src/lib/images/project-14.webp",
+            "full": "/src/lib/images/project-14.webp"
           }
         ],
-        "mainImage": "/images/home4.webp"
+        "mainImage": "/src/lib/images/project-11.webp"
       },
       {
         "id": 2,
@@ -37,26 +37,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home1.png",
-            "full": "/images/home1.png"
+            "thumbnail": "/src/lib/images/project-21.webp",
+            "full": "/src/lib/images/project-21.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home2.png"
+            "thumbnail": "/src/lib/images/project-22.webp",
+            "full": "/src/lib/images/project-22.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home3.png",
-            "full": "/images/home3.png"
+            "thumbnail": "/src/lib/images/project-23.webp",
+            "full": "/src/lib/images/project-23.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home.png"
+            "thumbnail": "/src/lib/images/project-24.webp",
+            "full": "/src/lib/images/project-24.webp"
           }
         ],
-        "mainImage": "/images/interior2.png"
+        "mainImage": "/src/lib/images/project-21.webp"
       },
       {
         "id": 3,
@@ -66,26 +66,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home1.png",
-            "full": "/images/home1.png"
+            "thumbnail": "/src/lib/images/project-31.webp",
+            "full": "/src/lib/images/project-31.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home2.png"
+            "thumbnail": "/src/lib/images/project-32.webp",
+            "full": "/src/lib/images/project-32.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home3.png",
-            "full": "/images/home3.png"
+            "thumbnail": "/src/lib/images/project-33.webp",
+            "full": "/src/lib/images/project-33.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home.png"
+            "thumbnail": "/src/lib/images/project-34.webp",
+            "full": "/src/lib/images/project-34.webp"
           }
         ],
-        "mainImage": "/images/interior1.png"
+        "mainImage": "/src/lib/images/project-31.webp"
       },
       {
         "id": 4,
@@ -95,26 +95,26 @@
         "images": [
           {
             "id": 1,
-            "thumbnail": "/images/home1.png",
-            "full": "/images/home1.png"
+            "thumbnail": "/src/lib/images/project-41.webp",
+            "full": "/src/lib/images/project-41.webp"
           },
           {
             "id": 2,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home2.png"
+            "thumbnail": "/src/lib/images/project-42.webp",
+            "full": "/src/lib/images/project-42.webp"
           },
           {
             "id": 3,
-            "thumbnail": "/images/home3.png",
-            "full": "/images/home3.png"
+            "thumbnail": "/src/lib/images/project-43.webp",
+            "full": "/src/lib/images/project-43.webp"
           },
           {
             "id": 4,
-            "thumbnail": "/images/home2.png",
-            "full": "/images/home.png"
+            "thumbnail": "/src/lib/images/project-44.webp",
+            "full": "/src/lib/images/project-44.webp"
           }
         ],
-        "mainImage": "/images/home3.png"
+        "mainImage": "/src/lib/images/project-41.webp"
       }
     ]
   }

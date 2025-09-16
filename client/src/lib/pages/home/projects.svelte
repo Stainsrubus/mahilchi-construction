@@ -32,6 +32,9 @@
   <link rel="preload" as="image" href={grandHall} />
   <link rel="preload" as="image" href={elegantStage} />
   <link rel="preload" as="image" href={modernVenue} />
+  <link rel="preload" as="image" href={conferenceCenter } />
+  <link rel="preload" as="image" href={weddingHall} />
+  <link rel="preload" as="image" href={exhibitionSpace} />
 </svelte:head>
 
 <div class="p-4 container mx-auto py-10 lg:py-20">

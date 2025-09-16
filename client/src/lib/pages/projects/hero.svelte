@@ -1,6 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
+  // Import images from $lib
+  import build1 from "$lib/svg/build1.svg";
+  import build2 from "$lib/svg/build2.svg";
 
   // Stats data
   const stats = [
@@ -13,15 +16,13 @@
   // Display values for counters
   let displayValues: number[] = [0, 0, 0, 0];
   let sections: HTMLElement[] = [];
-  let animated = [false,false, false, false, false];
-
+  let animated = [false, false, false, false];
   // Elements for animations
-  let about:HTMLElement;
+  let about: HTMLElement;
   let aboutSection: HTMLElement;
   let aboutHeading: HTMLElement;
   let aboutParagraph: HTMLElement;
   let aboutImages: HTMLElement[] = [];
-
   let videoSection: HTMLElement;
 
   onMount(() => {
@@ -42,11 +43,9 @@
         },
         { threshold: 0.1 }
       );
-
       if (sections[index]) {
         observer.observe(sections[index]);
       }
-
       return observer;
     });
 
@@ -64,11 +63,9 @@
         },
         { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
       );
-
       if (aboutSection) {
         observer.observe(aboutSection);
       }
-
       return observer;
     };
 
@@ -86,11 +83,9 @@
         },
         { threshold: 0.2, rootMargin: '0px 0px -100px 0px' }
       );
-
       if (videoSection) {
         observer.observe(videoSection);
       }
-
       return observer;
     };
 
@@ -107,10 +102,8 @@
           observer.unobserve(sections[index]);
         }
       });
-
       // Cleanup for About Us section
       if (aboutSection) aboutObserver.unobserve(aboutSection);
-
       // Cleanup for Video section
       if (videoSection) videoObserver.unobserve(videoSection);
     };
@@ -125,20 +118,18 @@
       const elapsed = currentTime - startTime;
       const progress = Math.min(elapsed / duration, 1);
       displayValues[index] = Math.floor(progress * target);
-
       if (progress < 1) {
         requestAnimationFrame(update);
       } else {
         displayValues[index] = target;
       }
     }
-
     requestAnimationFrame(update);
   }
 
   // About Us section animation functions
   function setInitialAboutState() {
-    const elements = [aboutHeading, aboutParagraph, ...aboutImages];
+    const elements = [about, aboutHeading, aboutParagraph, ...aboutImages];
     elements.forEach(el => {
       if (el) {
         el.style.opacity = '0';
@@ -150,13 +141,12 @@
 
   function animateInAbout() {
     const elements = [
-       { el: about, delay: 100 },
+      { el: about, delay: 100 },
       { el: aboutHeading, delay: 100 },
       { el: aboutParagraph, delay: 200 },
       { el: aboutImages[0], delay: 300 },
       { el: aboutImages[1], delay: 300 }
     ];
-
     elements.forEach(({ el, delay }) => {
       if (el) {
         setTimeout(() => {
@@ -168,7 +158,7 @@
   }
 
   function animateOutAbout() {
-    const elements = [about,aboutHeading, aboutParagraph, ...aboutImages];
+    const elements = [about, aboutHeading, aboutParagraph, ...aboutImages];
     elements.forEach(el => {
       if (el) {
         el.style.opacity = '0';
@@ -202,48 +192,53 @@
   }
 </style>
 
+<svelte:head>
+  <!-- Preload images -->
+  <link rel="preload" as="image" href={build1} />
+  <link rel="preload" as="image" href={build2} />
+</svelte:head>
+
 <!-- About Us Section -->
 <section bind:this={aboutSection} class="relative flex items-center">
   <div class="relative bg-primary h-[300px] p-0 w-screen">
     <div class="my-10 flex flex-col items-center justify-center text-center">
+      <div bind:this={about} class="animate-element">
+        <!-- Uncomment if needed
+        <h1 class="bg-[#163A59] text-[#88A1B1] border-[#88A1B1] w-fit border px-4 py-2 rounded-full">
+          Projects
+        </h1>
+        -->
+      </div>
 
-
-
-    <div       bind:this={about}  class="animate-element">
-      <!-- <h1  
-
-      class="bg-[#163A59] text-[#88A1B1]  border-[#88A1B1] w-fit border px-4 py-2 rounded-full  ">
-   Projects
-      </h1> -->
-    </div>
-   
       <h1
         bind:this={aboutHeading}
         class="text-4xl text-white md:text-6xl font-bold my-5 leading-tight max-w-6xl mx-auto !font-montserrat animate-element"
       >
-      Building Today for a Stronger Tomorrow
+        Building Today for a Stronger Tomorrow
       </h1>
+
       <p
         bind:this={aboutParagraph}
         class="text-base max-w-lg mx-auto !font-montserrat text-[#88A1B1] animate-element"
       >
-      Each project reflects our commitment to precision, durability, and customer satisfaction.
+        Each project reflects our commitment to precision, durability, and customer satisfaction.
       </p>
     </div>
 
     <img
       bind:this={aboutImages[0]}
-      src="/svg/build1.svg"
+      src={build1}
       alt="Modern luxury home at sunset"
-      class="absolute h-3/4 md:block hidden left-0 bottom-0 object-contain animate-element"
+      loading="lazy"
+      class="absolute h-3/4 left-0 md:block hidden bottom-0 object-contain animate-element"
     />
+
     <img
       bind:this={aboutImages[1]}
-      src="/svg/build2.svg"
+      src={build2}
       alt="Modern luxury home at sunset"
-      class="absolute h-3/4 md:block hidden  right-0 bottom-0 object-contain animate-element"
+      loading="lazy"
+      class="absolute h-3/4 right-0 md:block hidden bottom-0 object-contain animate-element"
     />
   </div>
 </section>
-
-

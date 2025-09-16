@@ -2,6 +2,17 @@
 	import Icon from "@iconify/svelte";
 	import { onMount } from "svelte";
 
+	// Import all images from lib/images
+	import img8 from "$lib/images/8.webp";
+	import img1 from "$lib/images/1.webp";
+	import home3 from "$lib/images/home3.webp";
+	import home4 from "$lib/images/home4.webp";
+	import img5 from "$lib/images/5.webp";
+	import img4 from "$lib/images/4.webp";
+	import img3 from "$lib/images/3.webp";
+	import img6 from "$lib/images/6.webp";
+	import img9 from "$lib/images/9.webp";
+
 	// Animation refs
 	let footerElement: HTMLElement;
 	let leftSection: HTMLElement;
@@ -12,7 +23,6 @@
 
 	onMount(() => {
 		setInitialState();
-
 		const observer = new IntersectionObserver(
 			(entries) => {
 				entries.forEach((entry) => {
@@ -28,9 +38,7 @@
 				rootMargin: "0px 0px -100px 0px"
 			}
 		);
-
 		if (footerElement) observer.observe(footerElement);
-
 		return () => {
 			if (footerElement) observer.unobserve(footerElement);
 		};
@@ -50,12 +58,11 @@
 	function animateIn() {
 		const elements = [
 			{ el: leftSection, delay: 100 },
-			{ el: linksSection, delay: 200 },
-			{ el: services1, delay: 300 },
-			{ el: services2, delay: 400 },
-			{ el: projects, delay: 500 }
+			{ el: linksSection, delay: 100 },
+			{ el: services1, delay: 100 },
+			{ el: services2, delay: 100 },
+			{ el: projects, delay: 200 }
 		];
-
 		elements.forEach(({ el, delay }) => {
 			if (el) {
 				setTimeout(() => {
@@ -85,7 +92,6 @@
 
 <footer bind:this={footerElement} class="bg-gray-100 py-12 !relative overflow-hidden">
 	<div class="transformed-square absolute -top-100 -left-90 bg-[#4584FF]/5 rounded-[30%] w-[900px] h-[900px]"></div>
-
 	<div class="container mx-auto px-4 z-30">
 		<!-- Footer Content -->
 		<div class="flex flex-col md:flex-row justify-between gap-8">
@@ -100,7 +106,6 @@
 					<a href="#"><Icon icon="mdi:linkedin" width="24" height="24" /></a>
 				</div>
 			</div>
-
 			<!-- Website Links -->
 			<div bind:this={linksSection} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Website Links</h3>
@@ -111,7 +116,6 @@
 					<li><a href="/contact" class="text-gray-600 hover:text-blue-600">Contact</a></li>
 				</ul>
 			</div>
-
 			<!-- Services 1 -->
 			<div bind:this={services1} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Services</h3>
@@ -122,7 +126,6 @@
 					<li><a href="#" class="text-gray-600 hover:text-blue-600">Consultation</a></li>
 				</ul>
 			</div>
-
 			<!-- Services 2 -->
 			<div bind:this={services2} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Services</h3>
@@ -133,28 +136,25 @@
 					<li><a href="#" class="text-gray-600 hover:text-blue-600">Custom Solutions</a></li>
 				</ul>
 			</div>
-
 			<!-- Top Projects -->
 			<div bind:this={projects} class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Top Projects</h3>
 				<div class="grid grid-cols-3 md:gap-2 gap-3">
-					<img src="/images/8.JPG" alt="Project 1" class="w-full h-16 object-cover rounded" />
-					<img src="/images/1.JPG" alt="Project 2" class="w-full h-16 object-cover rounded" />
-					<img src="/images/home3.png" alt="Project 3" class="w-full h-16 object-cover rounded" />
-					<img src="/images/home4.webp" alt="Project 4" class="w-full h-16 object-cover rounded" />
-					<img src="/images/5.JPG" alt="Project 5" class="w-full h-16 object-cover rounded" />
-					<img src="/images/4.JPG" alt="Project 6" class="w-full h-16 object-cover rounded" />
-					<img src="/images/3.JPG" alt="Project 4" class="w-full h-16 object-cover rounded" />
-					<img src="/images/6.JPG" alt="Project 5" class="w-full h-16 object-cover rounded" />
-					<img src="/images/9.JPG" alt="Project 6" class="w-full h-16 object-cover rounded" />
+					<img src={img8} loading="lazy" alt="Project 1" class="w-full h-16 object-cover rounded" />
+					<img src={img1} loading="lazy"  alt="Project 2" class="w-full h-16 object-cover rounded" />
+					<img src={home3} loading="lazy"  alt="Project 3" class="w-full h-16 object-cover rounded" />
+					<img src={home4} loading="lazy"  alt="Project 4" class="w-full h-16 object-cover rounded" />
+					<img src={img5} loading="lazy"  alt="Project 5" class="w-full h-16 object-cover rounded" />
+					<img src={img4} loading="lazy"  alt="Project 6" class="w-full h-16 object-cover rounded" />
+					<img src={img3} loading="lazy"  alt="Project 4" class="w-full h-16 object-cover rounded" />
+					<img src={img6} loading="lazy"  alt="Project 5" class="w-full h-16 object-cover rounded" />
+					<img src={img9} loading="lazy"  alt="Project 6" class="w-full h-16 object-cover rounded" />
 				</div>
 			</div>
 		</div>
-
 		<!-- Footer Bottom -->
 		<div class="mt-12 pt-6 border-t border-gray-200 text-center text-gray-500 text-sm">
-			<a href="https://www.wenoxo.in/" target="_blank">©2025 Wenoxo Technologies. All rights reserved
-			</a>
+			<a href="https://www.wenoxo.in/" target="_blank">©2025 Wenoxo Technologies. All rights reserved</a>
 		</div>
 	</div>
 </footer>

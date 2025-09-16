@@ -1,6 +1,9 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import { fly } from 'svelte/transition';
+    import homeVideo from '$lib/video/video2.webm';
+    import build1 from '$lib/svg/build1.svg';
+  import build2 from '$lib/svg/build2.svg';
   
     // Stats data
     const stats = [
@@ -201,6 +204,12 @@
       transition: all 0.8s ease-out;
     }
   </style>
+  <!-- Preload critical assets -->
+<svelte:head>
+  <link rel="preload" as="image" href={build1} />
+  <link rel="preload" as="image" href={build2} />
+  <link rel="preload" as="video" href={homeVideo} type="video/webm" />
+  </svelte:head>
   
   <!-- About Us Section -->
   <section bind:this={aboutSection} class="relative flex items-center">
@@ -234,13 +243,13 @@
   
       <img
         bind:this={aboutImages[0]}
-        src="/svg/build1.svg"
+        src={build1}
         alt="Modern luxury home at sunset"
         class="absolute h-3/4 md:block hidden left-0 bottom-0 object-contain animate-element"
       />
       <img
         bind:this={aboutImages[1]}
-        src="/svg/build2.svg"
+        src={build2}
         alt="Modern luxury home at sunset"
         class="absolute h-3/4 md:block hidden right-0 bottom-0 object-contain animate-element"
       />
@@ -256,7 +265,7 @@
         autoplay
         loop
         playsinline
-        src="/video/video2.webm"
+        src={homeVideo}
         type="video/*"
         preload="auto"
       ></video>

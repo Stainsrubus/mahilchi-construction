@@ -47,7 +47,8 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
-		"@iconify/svelte": "^5.0.1",
-		"iconify-icon": "^3.0.0"
+		"@iconify/svelte": "^5.0.2",
+		"iconify-icon": "^3.0.0",
+		"svelte-sonner": "^1.0.5"
 	}
 }

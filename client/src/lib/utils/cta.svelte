@@ -1,7 +1,7 @@
 <script lang="ts">
   import Icon from "@iconify/svelte";
   import { onMount } from 'svelte';
-  
+  import ctaImage from '$lib/images/cta.png';
   // Animation elements
   let sectionElement: HTMLElement;
   let textContent: HTMLElement;
@@ -81,7 +81,9 @@
   }
 </script>
 
-<section bind:this={sectionElement} class="relative text-white bg-[url('/images/cta.png')] bg-no-repeat bg-cover bg-center">
+<section bind:this={sectionElement} 
+style="background-image: url('{ctaImage}');"
+class="relative text-white  bg-no-repeat bg-cover bg-center">
   <div class="md:py-20 py-10 container mx-auto lg:px-16">
       <div class="absolute inset-0 bg-black/80"></div>
       

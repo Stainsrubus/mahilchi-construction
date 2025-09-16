@@ -2,7 +2,7 @@
   // Import images and SVGs from $lib
   import card1 from '$lib/images/card1.png';
   import card2 from '$lib/images/card2.png';
-  import aboutImage from '$lib/images/3.JPG';
+  import aboutImage from '$lib/images/3.webp';
   import vector4 from '$lib/svg/vector4.svg';
   import vector5 from '$lib/svg/vector5.svg';
   import vector6 from '$lib/svg/vector6.svg';
@@ -63,6 +63,7 @@
         alt="Mahilchi Construction Building"
         class="w-full h-auto shadow-lg"
         width="600"
+        loading="lazy"
         height="400"
       />
     </div>
@@ -83,7 +84,7 @@
       <button
         class="rounded-full flex py-[10px] gap-3 px-[22px] bg-[linear-gradient(87.95deg,#F2960F_0.88%,#F9BF30_10.7%,#F9BF30_94.21%,#FAA21A_99.12%),linear-gradient(180deg,rgba(255,255,255,0.371)_-5.09%,rgba(255,255,255,0)_20.37%)] text-[#040B14] font-medium text-base w-fit"
       >
-        Services <span><img src={callIcon} alt="Call icon" width="20" height="20" /></span>
+        Services <span><img src={callIcon} alt="Call icon" loading="lazy" width="20" height="20" /></span>
       </button>
     </div>
   </div>
