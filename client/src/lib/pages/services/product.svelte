@@ -171,7 +171,7 @@
     </div>
 
     <!-- Scrolling Container -->
-    <div bind:this={carouselContainer} class="relative overflow-hidden">
+    <div class="relative overflow-hidden">
       <div
         bind:this={scrollContainer}
         class="flex gap-8"
