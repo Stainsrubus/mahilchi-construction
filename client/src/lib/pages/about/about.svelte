@@ -112,7 +112,7 @@
                 </div>
                 <Tabs.Root value="mission" class="w-full">
                     <!-- Tabs List -->
-                    <div bind:this={tabsList} class="overflow-x-auto">
+                    <div bind:this={tabsList} class="overflow-x-auto scrollbar-none" style="overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;">
                         <Tabs.List class="flex md:space-x-4 space-x-1 !bg-transparent overflow-x-scroll no-scrollbar">
                             <Tabs.Trigger
                                 value="mission"
