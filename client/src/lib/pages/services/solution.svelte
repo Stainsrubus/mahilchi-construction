@@ -21,8 +21,11 @@
       }
     ];
     
-    // Track hovered card
+    // Track interaction states
     let hoveredIndex = -1;
+    let clickedIndex = -1;
+    let lastInteractionTime = 0;
+    let isTouchDevice = false;
     
     // Animation elements
     let sectionElement: HTMLElement;
@@ -31,11 +34,14 @@
     let cardElements: HTMLElement[] = [];
     
     // Set first card as hovered by default
-    $: if (services.length > 0 && hoveredIndex === -1) {
+    $: if (services.length > 0 && hoveredIndex === -1 && clickedIndex === -1) {
         hoveredIndex = 0;
     }
     
     onMount(() => {
+      // Check if it's a touch device
+      isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+      
       // Set initial state immediately
       setInitialState();
       
@@ -108,14 +114,47 @@
       });
     }
     
+    // Handle card interaction
+    function handleCardInteraction(index: number) {
+      const now = Date.now();
+      
+      // Prevent rapid consecutive interactions
+      if (now - lastInteractionTime < 300) return;
+      lastInteractionTime = now;
+      
+      if (isTouchDevice) {
+        // For touch devices, toggle the clicked card
+        clickedIndex = clickedIndex === index ? -1 : index;
+        hoveredIndex = -1; // Clear hover state on touch devices
+      } else {
+        // For non-touch devices, handle click to set persistent state
+        clickedIndex = clickedIndex === index ? -1 : index;
+      }
+    }
+    
     // Handle overlay grid hover
     function handleOverlayHover(index: number) {
-      hoveredIndex = index;
+      // Only update hover state if no card is actively clicked
+      if (clickedIndex === -1) {
+        hoveredIndex = index;
+      }
     }
     
     function handleOverlayLeave() {
-      // Don't reset to -1, keep the last hovered card highlighted
-      // hoveredIndex = -1;
+      // Only reset hover state if no card is actively clicked
+      if (clickedIndex === -1) {
+        hoveredIndex = -1;
+      }
+    }
+    
+    // Determine if a card should be highlighted
+    function isCardHighlighted(index: number) {
+      // If a card is clicked, only highlight that one
+      if (clickedIndex !== -1) {
+        return clickedIndex === index;
+      }
+      // Otherwise, highlight based on hover
+      return hoveredIndex === index;
     }
   </script>
   
@@ -134,9 +173,12 @@
             <!-- svelte-ignore a11y_no_static_element_interactions -->
             <div
               bind:this={cardElements[index]}
-              class="rounded-lg relative bg-white overflow-hidden p-6 transition-all duration-300 ease-in-out transform group"
-              class:bg-yellow-400={hoveredIndex === index}
-              class:scale-105={hoveredIndex === index}
+              class="rounded-lg relative bg-white overflow-hidden p-6 transition-all duration-300 ease-in-out transform group cursor-pointer"
+              class:bg-yellow-400={isCardHighlighted(index)}
+              class:scale-105={isCardHighlighted(index)}
+              on:click={() => handleCardInteraction(index)}
+              on:mouseenter={() => !isTouchDevice && handleOverlayHover(index)}
+              on:mouseleave={() => !isTouchDevice && handleOverlayLeave()}
             >
               <!-- Card Content Wrapper -->
               <div class="h-full flex flex-col">
@@ -174,18 +216,20 @@
           {/each}
         </div>
   
-        <!-- Invisible Overlay Grid - Fixed positioning with proper gap calculation -->
-        <div class="absolute top-0 left-0 w-full h-full flex z-10 pointer-events-auto">
-          {#each services as _, index}
-            <!-- svelte-ignore a11y_no_static_element_interactions -->
-            <div
-              class="h-full bg-transparent cursor-pointer flex-1"
-              class:mr-6={index < services.length - 1}
-              on:mouseenter={() => handleOverlayHover(index)}
-              on:mouseleave={handleOverlayLeave}
-            ></div>
-          {/each}
-        </div>
+        <!-- Invisible Overlay Grid - Only for non-touch devices -->
+        {#if !isTouchDevice}
+          <div class="absolute top-0 left-0 w-full h-full flex z-10 pointer-events-auto">
+            {#each services as _, index}
+              <!-- svelte-ignore a11y_no_static_element_interactions -->
+              <div
+                class="h-full bg-transparent cursor-pointer flex-1"
+                class:mr-6={index < services.length - 1}
+                on:mouseenter={() => handleOverlayHover(index)}
+                on:mouseleave={handleOverlayLeave}
+              ></div>
+            {/each}
+          </div>
+        {/if}
       </div>
     </div>
   </section>

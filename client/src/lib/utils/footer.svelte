@@ -90,13 +90,13 @@
 	}
 </style>
 
-<footer bind:this={footerElement} class="bg-gray-100 py-12 !relative overflow-hidden">
+<footer  class="bg-gray-100 py-12 !relative overflow-hidden">
 	<div class="transformed-square absolute -top-100 -left-90 bg-[#4584FF]/5 rounded-[30%] w-[900px] h-[900px]"></div>
 	<div class="container mx-auto px-4 z-30">
 		<!-- Footer Content -->
 		<div class="flex flex-col md:flex-row justify-between gap-8">
 			<!-- Left Section -->
-			<div bind:this={leftSection} class="w-full md:w-1/4 mb-8 md:mb-0">
+			<div  class="w-full md:w-1/4 mb-8 md:mb-0">
 				<p class="text-gray-600 mb-6">
 					We are a trusted construction company, delivering quality residential, commercial, and industrial projects. Our focus is on strong design, timely completion, and lasting customer satisfaction. Connect with us to build your future.
 				</p>
@@ -107,7 +107,7 @@
 				</div>
 			</div>
 			<!-- Website Links -->
-			<div bind:this={linksSection} class="w-full md:w-1/4">
+			<div  class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Website Links</h3>
 				<ul class="space-y-2">
 					<li><a href="/" class="text-gray-600 hover:text-blue-600">Home</a></li>
@@ -117,7 +117,7 @@
 				</ul>
 			</div>
 			<!-- Services 1 -->
-			<div bind:this={services1} class="w-full md:w-1/4">
+			<div  class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Services</h3>
 				<ul class="space-y-2">
 					<li>Home Renovation</li>
@@ -127,7 +127,7 @@
 				</ul>
 			</div>
 			<!-- Services 2 -->
-			<div bind:this={services2} class="w-full md:w-1/4">
+			<div  class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Services</h3>
 				<ul class="space-y-2">
 					<li>Exterior Design</li>
@@ -137,7 +137,7 @@
 				</ul>
 			</div>
 			<!-- Top Projects -->
-			<div bind:this={projects} class="w-full md:w-1/4">
+			<div  class="w-full md:w-1/4">
 				<h3 class="text-lg font-semibold text-gray-800 mb-4">Top Projects</h3>
 				<div class="grid grid-cols-3 md:gap-2 gap-3">
 					<img src={img8} loading="lazy" alt="Project 1" class="w-full h-16 object-cover rounded" />

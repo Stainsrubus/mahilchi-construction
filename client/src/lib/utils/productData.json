@@ -2,9 +2,9 @@
     "products": [
       {
         "id": 1,
-        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "category": "Engineering Excellence",
         "title": "Industrial Building Construction",
-        "description": "We provide durable, functional, and cost-effective industrial buildings including factories, warehouses, and workshops. Our designs focus on safety, efficiency, and scalability, ensuring your facility supports long-term growth and smooth operations.",
+        "description": "We specialize in industrial building construction that blends strength, functionality, and modern design. Our projects focus on creating durable structures with smart interiors that boost productivity and comfort. From sleek exteriors to collaborative workspaces and stylish lounges, we deliver spaces that inspire innovation. With quality materials and sustainable practices, we build for performance and long-term value.",
         "images": [
           {
             "id": 1,
@@ -31,9 +31,9 @@
       },
       {
         "id": 2,
-        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "category": "Smart Designs for Productivity",
         "title": "Commercial Construction",
-        "description": "We specialize in building modern, efficient, and high-quality commercial spaces including offices, retail outlets, and business centers. Our designs focus on functionality, aesthetics, and long-term value to support your business growth.",
+        "description": "We specialize in commercial construction, delivering modern office spaces, corporate buildings, and business hubs designed for efficiency and growth. Our projects combine innovative architecture with functional interiors to create work environments that inspire productivity. From sleek exteriors to collaborative workspaces and conference halls, we build with quality, style, and long-term value in mind.",
         "images": [
           {
             "id": 1,
@@ -60,9 +60,9 @@
       },
       {
         "id": 3,
-        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "category": "Innovating Infrastructure",
         "title": "Infrastructure Development",
-        "description": "We deliver reliable and sustainable infrastructure solutions including roads, bridges, and utility projects. Our focus is on durability, safety, and innovation to support community growth and economic development.",
+        "description": "The infrastructure development process begins with careful planning and design to ensure efficiency, safety, and sustainability. It moves through stages of land preparation, construction, and installation of essential systems like roads, utilities, and structures. Each step is managed with strict quality control to deliver durable and scalable outcomes. The goal is to create reliable infrastructure that supports long-term growth and community development.",
         "images": [
           {
             "id": 1,
@@ -89,9 +89,9 @@
       },
       {
         "id": 4,
-        "category": "ENGINEERING FOR PRODUCTIVITY",
+        "category": "Building Spaces for Better Living",
         "title": "Residential Complexes",
-        "description": "We construct modern and sustainable residential complexes with a focus on comfort, safety, and quality living. Our designs blend functionality with aesthetics to create vibrant communities for families to thrive.",
+        "description": "The residential complex development process starts with thoughtful planning and design to create safe, modern, and comfortable living spaces. It includes land development, construction, and integration of amenities like parks, parking, and community facilities. Every stage is carefully executed with a focus on quality, sustainability, and aesthetics. The aim is to deliver homes that offer convenience, security, and long-term value for residents.",
         "images": [
           {
             "id": 1,

@@ -2,14 +2,44 @@
   import { onMount, onDestroy } from 'svelte';
   
   // Milestone data
-  const milestones = [
-    { year: '2012', title: 'Lorem ipsum', description: 'Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Lorem ipsum Dolor Sit Amet' },
-    { year: '2013', title: 'Lorem ipsum', description: 'Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Lorem ipsum Dolor Sit Amet' },
-    { year: '2014', title: 'Lorem ipsum', description: 'Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Lorem ipsum Dolor Sit Amet' },
-    { year: '2015', title: 'Lorem ipsum', description: 'Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Lorem ipsum Dolor Sit Amet' },
-    { year: '2016', title: 'Lorem ipsum', description: 'Lorem ipsum Dolor Sit Amet, Consectetur Adipiscing Lorem ipsum Dolor Sit Amet' }
-  ];
-  
+ const milestones = [
+  { 
+    year: '2012', 
+    title: 'Company Founded', 
+    description: 'Mahilchi Associates was established with a vision to deliver reliable and quality construction services in both residential and commercial sectors.' 
+  },
+  { 
+    year: '2014', 
+    title: 'First Major Project', 
+    description: 'Successfully completed our first large-scale residential apartment project with modern amenities and sustainable designs.' 
+  },
+  { 
+    year: '2016', 
+    title: 'Expansion into Commercial Spaces', 
+    description: 'Expanded services into commercial construction, delivering office spaces, retail complexes, and industrial structures.' 
+  },
+  { 
+    year: '2018', 
+    title: 'Green Building Initiatives', 
+    description: 'Adopted eco-friendly construction practices with a focus on energy-efficient designs and sustainable materials.' 
+  },
+  { 
+    year: '2020', 
+    title: 'Government & Infrastructure Projects', 
+    description: 'Awarded contracts for government and infrastructure development projects, enhancing our credibility and expertise.' 
+  },
+  { 
+    year: '2022', 
+    title: 'Smart Housing Projects', 
+    description: 'Launched modern housing projects integrating smart home technology, elevating urban living experiences.' 
+  },
+  { 
+    year: '2024', 
+    title: 'Trusted Brand Recognition', 
+    description: 'Recognized as a trusted construction partner with a portfolio of successful projects and satisfied clients across multiple cities.' 
+  }
+];
+
   let scrollContainer: HTMLDivElement;
   let scrollInterval: NodeJS.Timeout;
   
